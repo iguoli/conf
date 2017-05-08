@@ -33,3 +33,4 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:EclimCompletionMethod = 'omnifunc'
