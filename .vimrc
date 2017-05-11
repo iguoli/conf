@@ -7,6 +7,8 @@ set shiftwidth=4
 set smarttab
 set path+=/home/`whoami`,/opt/jdk1.8.0_131/src/java/lang,/opt/jdk1.8.0_131/src/java/util,/opt/jdk1.8.0_131/src/java/util/concurrent
 
+nmap ; :
+
 " Vundle settings
 set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
