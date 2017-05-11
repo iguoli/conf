@@ -18,16 +18,12 @@ call vundle#begin()
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
 
-" Perform all insert mode completions with Tab
-"Plugin 'ervandew/supertab'
-
 Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
-
-" SuperTab configuration
-"let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 
 " YCM configuration
 " cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim
