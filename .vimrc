@@ -5,9 +5,16 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set path+=/home/`whoami`,/opt/jdk1.8.0_131/src/java/lang,/opt/jdk1.8.0_131/src/java/util,/opt/jdk1.8.0_131/src/java/util/concurrent
+set path+=/home/eric
 
+" key mapping
 nmap ; :
+imap " ""<Esc>i
+imap ' ''<Esc>i
+imap ( ()<Esc>i
+imap [ []<Esc>i
+imap { {}<Esc>i
+imap <lt> <lt>><Esc>i
 
 " Vundle settings
 set nocompatible              " 去除VI一致性,必须
