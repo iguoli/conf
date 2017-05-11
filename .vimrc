@@ -40,3 +40,9 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:EclimCompletionMethod = 'omnifunc'
+let mapleader=","
+nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>r :YcmCompleter GoToReferences<CR>
+nnoremap <leader>c :YcmCompleter GetDoc<CR>
