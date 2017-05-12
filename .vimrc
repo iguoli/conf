@@ -7,14 +7,20 @@ set shiftwidth=4
 set smarttab
 set path+=/home/eric
 
-" key mapping
+" eric's 'key mapping
+let mapleader=","
+" 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
+" 使用,,替代<Esc>进入Normal-mode
+inoremap <leader>, <Esc>
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 inoremap <lt> <lt>><Esc>i
+" 光标后移一个字符
+inoremap <leader><TAB> <Esc>la
 
 " Vundle settings
 set nocompatible              " 去除VI一致性,必须
@@ -40,7 +46,6 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:EclimCompletionMethod = 'omnifunc'
-let mapleader=","
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
