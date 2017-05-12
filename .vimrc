@@ -41,9 +41,8 @@ call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
 " YCM configuration
-" cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim
 " 设置YCM默认规则
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:EclimCompletionMethod = 'omnifunc'
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
