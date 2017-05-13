@@ -37,6 +37,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
@@ -44,9 +47,17 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_autoclose_preview_window_after_completion=0
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:EclimCompletionMethod = 'omnifunc'
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 nnoremap <leader>c :YcmCompleter GetDoc<CR>
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<F2>"
+let g:UltiSnipsJumpForwardTrigger="<F3>"
+let g:UltiSnipsJumpBackwardTrigger="<F4>"
+let g:UltiSnipsListSnippets="<F5>"
