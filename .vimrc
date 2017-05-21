@@ -6,13 +6,17 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set path+=/home/eric
+set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 
 " eric's 'key mapping
 let mapleader=","
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
+" 在Normal-mode中直接从光标处进行换行
+nnoremap <leader><CR> i<CR><Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
+" 自动补全反引号或反括号，并使光标位于括号内
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
