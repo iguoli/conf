@@ -1,0 +1,10 @@
+{
+  "port_password":{
+	  "80":"password",
+	  "443":"password",
+	  "1080":"password"
+  },
+  "timeout":300,
+  "method":"aes-256-cfb",
+  "fast_open":false
+}
