@@ -7,6 +7,7 @@ set shiftwidth=4
 set smarttab
 set path+=/home/eric
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
+syntax on
 
 " eric's 'key mapping
 let mapleader=","
