@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# my settings
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
 fi
