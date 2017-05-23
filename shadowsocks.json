@@ -1,9 +1,12 @@
 {
-  "server":"66.112.210.108",
-  "server_port":443,
+  "server":"server-ip",
+  "port_password":{
+	  "80":"password",
+	  "443":"password"
+  },
   "local_address":"127.0.0.1",
   "local_port":1080,
-  "password":"li820105",
+  "password":"password",
   "timeout":300,
   "method":"aes-256-cfb",
   "fast_open":false
