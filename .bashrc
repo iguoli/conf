@@ -117,8 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # my settings
-if [ -f ~/.bashrc.local ]; then
-    . ~/.bashrc.local
-fi
-
 set -o vi
+
+# uncomment to set proxy
+#export http_proxy="127.0.0.1:1080"
+#export https_proxy="127.0.0.1:1080"

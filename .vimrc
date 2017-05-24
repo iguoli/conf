@@ -12,8 +12,8 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 let mapleader=","
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
-" 在Normal-mode中直接从光标处进行换行
-nnoremap <leader><CR> i<CR><Esc>
+" 在Normal-mode中直接从光标后进行换行
+nnoremap <leader><CR> a<CR><Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
 " 自动补全反引号或反括号，并使光标位于括号内
@@ -61,7 +61,7 @@ nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 nnoremap <leader>c :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<F2>"
+let g:UltiSnipsExpandTrigger="<F4>"
 let g:UltiSnipsJumpForwardTrigger="<F3>"
-let g:UltiSnipsJumpBackwardTrigger="<F4>"
+let g:UltiSnipsJumpBackwardTrigger="<F2>"
 let g:UltiSnipsListSnippets="<F5>"
