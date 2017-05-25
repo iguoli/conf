@@ -118,7 +118,10 @@ fi
 
 # my settings
 set -o vi
-
 # uncomment to set proxy
-#export http_proxy="127.0.0.1:1080"
-#export https_proxy="127.0.0.1:1080"
+export http_proxy="127.0.0.1:1080"
+export https_proxy="127.0.0.1:1080"
+# use fbterm at runlevel3
+if [ `runlevel | cut -d' ' -f2` -eq 3 ]; then
+	/usr/bin/fbterm
+fi
