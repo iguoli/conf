@@ -50,7 +50,7 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " YCM configuration
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
-let g:ycm_server_python_interpreter='/usr/bin/python'
+"let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:EclimCompletionMethod = 'omnifunc'
