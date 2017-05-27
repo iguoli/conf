@@ -17,8 +17,6 @@ nnoremap <leader><CR> a<CR><Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
 " 自动补全反引号或反括号，并使光标位于括号内
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
