@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/eric/.oh-my-zsh
+export ZSH=/home/eric/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent)
+plugins=(git common-aliases z vundle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,10 +62,6 @@ bindkey -v
 # uncomment to set proxy
 export http_proxy="socks5://127.0.0.1:1080"
 export https_proxy="socks5://127.0.0.1:1080"
-# use fbterm at runlevel3
-if [ `runlevel | cut -d' ' -f2` -eq 3 ]; then
-	/usr/bin/fbterm
-fi
 
 unset PAGER
 
