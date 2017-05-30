@@ -16,11 +16,6 @@ nnoremap ; :
 nnoremap <leader><CR> a<CR><Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
-" 自动补全反引号或反括号，并使光标位于括号内
-"inoremap ( ()<Esc>i
-"inoremap [ []<Esc>i
-"inoremap { {}<Esc>i
-"inoremap <lt> <lt>><Esc>i
 " 光标后移一个字符
 inoremap <leader><TAB> <Esc>la
 
@@ -45,6 +40,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'tpope/vim-surround'
+
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
@@ -67,10 +66,9 @@ let g:UltiSnipsJumpForwardTrigger="<F3>"
 let g:UltiSnipsJumpBackwardTrigger="<F2>"
 let g:UltiSnipsListSnippets="<F5>"
 
-"下载powerline字体并安装
-"https://github.com/powerline/fonts
-
 "设置vim-airline
+let g:airline_theme='simple'
+
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
