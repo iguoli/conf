@@ -58,6 +58,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 bindkey -v
+export EDITOR='vim'
 
 # uncomment to set proxy
 #export http_proxy="socks5://127.0.0.1:1080"
