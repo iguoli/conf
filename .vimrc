@@ -42,6 +42,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-surround'
 
+Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " 必须
