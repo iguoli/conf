@@ -10,7 +10,7 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set encoding=utf-8
 
 " uncomment below lines for windows
-" colorscheme industry
+" colorscheme slate
 " set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 " syntax on
 
