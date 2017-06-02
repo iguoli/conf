@@ -8,9 +8,9 @@ set smarttab
 set path+=/home/eric
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 
-" for windows
+" uncomment below lines for windows
 " colo industry
-" set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+" set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 " syntax on
 
 " key mapping
