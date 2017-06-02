@@ -1,4 +1,4 @@
-" eric's settings
+" common settings
 set hlsearch
 set number
 set smartindent
@@ -8,7 +8,12 @@ set smarttab
 set path+=/home/eric
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 
-" eric's 'key mapping
+" for windows
+" colo industry
+" set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+" syntax on
+
+" key mapping
 let mapleader=","
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
@@ -52,7 +57,6 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " YCM configuration
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
-"let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_autoclose_preview_window_after_completion=0
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:EclimCompletionMethod = 'omnifunc'
