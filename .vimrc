@@ -11,7 +11,7 @@ set encoding=utf-8
 
 " uncomment below lines for windows
 " colorscheme industry
-" set guifont=Ubuntu\ Mono\ for\ Powerline:h11
+" set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 " syntax on
 
 " key mapping
