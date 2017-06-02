@@ -7,9 +7,10 @@ set shiftwidth=4
 set smarttab
 set path+=/home/eric
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
+set encoding=utf-8
 
 " uncomment below lines for windows
-" colo industry
+" colorscheme industry
 " set guifont=Ubuntu\ Mono\ for\ Powerline:h11
 " syntax on
 
@@ -86,5 +87,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
