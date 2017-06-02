@@ -10,7 +10,7 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 
 " uncomment below lines for windows
 " colo industry
-" set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+" set guifont=Ubuntu\ Mono\ for\ Powerline:h11
 " syntax on
 
 " key mapping
