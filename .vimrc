@@ -7,11 +7,12 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
+syntax on
+set background=dark
+colorscheme solarized
 
 " uncomment below lines for windows
-" colorscheme slate
 " set guifont=Ubuntu\ Mono\ for\ Powerline:h12
-" syntax on
 
 " key mapping
 let mapleader=","
@@ -34,22 +35,16 @@ call vundle#begin()
 
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'scrooloose/nerdtree'
-
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
 Plugin 'tpope/vim-surround'
-
 Plugin 'jiangmiao/auto-pairs'
-
 Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
