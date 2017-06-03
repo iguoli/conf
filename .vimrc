@@ -2,12 +2,11 @@
 set hlsearch
 set number
 set smartindent
+set smarttab
 set tabstop=4
 set shiftwidth=4
-set smarttab
-set path+=/home/eric
-set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 
 " uncomment below lines for windows
 " colorscheme slate
