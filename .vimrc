@@ -7,12 +7,14 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
-syntax on
-set background=dark
-colorscheme solarized
 
-" uncomment below lines for windows
-" set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+" for gVim
+if has('gui_running')
+	syntax on
+	set background=dark
+	colorscheme solarized
+	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+endif
 
 " key mapping
 let mapleader=","
