@@ -12,6 +12,7 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 if has('gui_running')
 	syntax on
 	set background=dark
+	let g:solarized_contrast="high"
 	colorscheme solarized
 	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 endif
