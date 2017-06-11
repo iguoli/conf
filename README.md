@@ -22,6 +22,11 @@
     ```
  
  3. Install vim
+    ```
+    sudo add-apt-repository ppa:jonathonf/vim
+    sudo apt update
+    sudo apt install vim
+    ```
 
-install zsh and oh-my-zsh
+4. install zsh and oh-my-zsh
 
