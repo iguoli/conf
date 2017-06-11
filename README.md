@@ -65,12 +65,13 @@
     cp ~/conf/.vimrc ~
     vim +PluginInstall +qall
     ```
-    - Configure [YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)
+    - Configure [YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)
     ```
     sudo apt-get install build-essential cmake
     sudo apt-get install python-dev python3-dev
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
+    ```
 
 4. install zsh and oh-my-zsh
 
