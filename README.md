@@ -4,11 +4,15 @@
 ## For APT-based system(Debian, Ubuntu, Mint, etc.)
 
 1. Install [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
+    - Install from ppa:max-c-lv/shadowsocks-libev
     ```
     sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
     sudo apt update
     sudo apt install shadowsocks-libev
     ```
+    - Systemd shadowsocks-libev service start ss-server by default, if working as client,  
+        edit /lib/systemd/system/shadowsocks-libev.service and replace ss-server to ss-local.  
+        May also need to edit /etc/init.d/shadowsocks-libev and replace ss-server to ss-local
 
 2. Install google-chrome
     - Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
@@ -22,7 +26,7 @@
     ```
  
  3. Install Vim
-    - Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that Vim don't have python compiled)
+    - Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
     ```
     sudo add-apt-repository ppa:jonathonf/vim
     sudo apt update
@@ -55,6 +59,18 @@
     sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
     sudo update-alternatives --set vi /usr/bin/vim
     ```
+    - [Setup Vundle](https://github.com/VundleVim/Vundle.vim)
+    ```
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    cp ~/conf/.vimrc ~
+    vim +PluginInstall +qall
+    ```
+    - Configure [YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)
+    ```
+    sudo apt-get install build-essential cmake
+    sudo apt-get install python-dev python3-dev
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.py --clang-completer
 
 4. install zsh and oh-my-zsh
 
