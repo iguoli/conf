@@ -11,8 +11,8 @@
     sudo apt install shadowsocks-libev
     ```
     - Systemd shadowsocks-libev service start ss-server by default, if working as client,  
-        edit /lib/systemd/system/shadowsocks-libev.service and replace ss-server to ss-local.  
-        May also need to edit /etc/init.d/shadowsocks-libev and replace ss-server to ss-local
+        edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to `ss-local`.  
+        May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
 2. Install google-chrome
     - Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
@@ -72,6 +72,24 @@
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     ```
+	- Install [Powerline fonts](https://github.com/powerline/fonts)
+	```
+	cd ~
+	git clone https://github.com/powerline/fonts.git
+	cd fonts
+	./install.sh
+	```
 
-4. install zsh and oh-my-zsh
+4. Install [zsh][1] and [oh-my-zsh][2]
+	[1]:(https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
+	[2]:(https://github.com/robbyrussell/oh-my-zsh)
+	- Install [zsh][3] from source
+	[3]:(http://blog.byteb.us/oh-my-zsh-debian-tutorial/)
+	- Install oh-my-zsh
+	```
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
+	
+
+5. Install tmux
 
