@@ -26,12 +26,12 @@
     ```
 3. Install Git
 	```
-	git config --global user.name = guoli100
-	git config --global user.email = golotv@163.com
+	git config --global user.name guoli100
+	git config --global user.email golotv@163.com
 	git config --global credential.helper 'cache --timeout=86400'
-	git config --global http.proxy = socks5://127.0.0.1:1080
-	git config --global https.proxy = socks5://127.0.0.1:1080
-	git config --global core.editor = vim
+	git config --global http.proxy socks5://127.0.0.1:1080
+	git config --global https.proxy socks5://127.0.0.1:1080
+	git config --global core.editor vim
 	```
  
 4. Install Vim
