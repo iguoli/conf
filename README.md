@@ -25,6 +25,14 @@
     sudo apt install google-chrome-stable
     ```
 3. Install Git
+	```
+	git config --global user.name = guoli100
+	git config --global user.email = golotv@163.com
+	git config --global credential.helper 'cache --timeout=86400'
+	git config --global http.proxy = socks5://127.0.0.1:1080
+	git config --global https.proxy = socks5://127.0.0.1:1080
+	git config --global core.editor = vim
+	```
  
 4. Install Vim
     - Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
@@ -68,8 +76,7 @@
     ```
     - Configure [YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)
     ```
-    sudo apt-get install build-essential cmake
-    sudo apt-get install python-dev python3-dev
+    sudo apt-get install build-essential cmake python-dev python3-dev
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     ```
@@ -81,11 +88,8 @@
 	./install.sh
 	```
 
-5. Install [zsh][1] and [oh-my-zsh][2]
-	[1]:https://github.com/zsh-users/zsh
-	[2]:https://github.com/robbyrussell/oh-my-zsh
-	- Install [zsh][3] from source
-	[3]:https://github.com/zsh-users/zsh/blob/master/INSTALL
+5. Install [zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+	- Install [zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL) from source
 	```
 	cd
 	sudo apt install build-essential autoconf perl libncurses5-dev yodl
@@ -115,5 +119,4 @@
 	./configure
 	make
 	sudo make install
-
 	```
