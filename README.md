@@ -14,7 +14,7 @@
         edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to `ss-local`.  
         May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
-2. Install google-chrome
+2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
     - Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
     or  
     - Install from [google linux repository](https://www.google.com/linuxrepositories/)
@@ -24,7 +24,26 @@
     sudo apt update
     sudo apt install google-chrome-stable
     ```
-3. Install Git
+3. Install [Git](https://github.com/git/git)
+	- Install git from [ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa)
+	```
+	sudo add-apt-repository ppa:git-core/ppa
+	sudo apt update
+	sudo apt install git
+	```
+	- Install [git](https://github.com/git/git/blob/master/INSTALL) from source
+	```
+	cd
+	sudo apt install build-essential autoconf asciidoc xsltproc
+	curl -L https://github.com/git/git/archive/master.zip -o git.zip
+	unzip git.zip
+	cd git-master
+	make configure
+	./configure --prefix=/usr
+	make all doc
+	sudo make install install-doc install-html
+
+	```
 	- Config git
 	```
 	git config --global user.name guoli100
@@ -118,7 +137,7 @@
 	- Install [tmux](https://github.com/tmux/tmux)
 	```
 	cd
-	sudo apt install build-essential libevent-dev libncurses5-dev make autoconf automake pkg-config
+	sudo apt install build-essential libevent-dev libncurses5-dev autoconf automake pkg-config
 	git clone https://github.com/tmux/tmux.git
 	cd tmux
 	sh autogen.sh
