@@ -104,7 +104,7 @@
 	chsh -s "$(which zsh)"
 	```
 	Log out and login back again to use new defaul shell.
-	- Install oh-my-zsh
+	- Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 	```
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	```
@@ -115,6 +115,7 @@
 	
 
 6. Install [tmux](https://github.com/tmux/tmux)
+	- Install [tmux](https://github.com/tmux/tmux)
 	```
 	cd
 	sudo apt install build-essential libevent-dev libncurses5-dev make autoconf automake pkg-config
@@ -124,4 +125,11 @@
 	./configure
 	make
 	sudo make install
+	```
+	- Install [oh-my-tmux](https://github.com/gpakosz/.tmux)
+	```
+	cd
+	git clone https://github.com/gpakosz/.tmux.git
+	ln -s -f .tmux/.tmux.conf .
+	cp ~/conf/.tmux.conf.local .
 	```
