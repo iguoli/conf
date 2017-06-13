@@ -1,3 +1,25 @@
+" Vundle settings
+set nocompatible              " 去除VI一致性,必须
+filetype off                  " 必须
+
+" 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" 让vundle管理插件版本,必须
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+call vundle#end()            " 必须
+filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+
 " common settings
 set hlsearch
 set number
@@ -27,30 +49,8 @@ nnoremap <leader><CR> a<CR><Esc>
 inoremap <leader>, <Esc>
 " 光标后移一个字符
 inoremap <leader><TAB> <Esc>la
-
-" Vundle settings
-set nocompatible              " 去除VI一致性,必须
-filetype off                  " 必须
-
-" 设置包括vundle和初始化相关的runtime path
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" 让vundle管理插件版本,必须
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-surround'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
-
-call vundle#end()            " 必须
-filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+" 使用<tab>替代:bn在buffers中切换
+nnoremap <tab> :bn<CR> 
 
 " YCM configuration
 " 设置YCM默认规则

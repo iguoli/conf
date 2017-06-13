@@ -24,8 +24,9 @@
     sudo apt update
     sudo apt install google-chrome-stable
     ```
+3. Install Git
  
- 3. Install Vim
+4. Install Vim
     - Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
     ```
     sudo add-apt-repository ppa:jonathonf/vim
@@ -37,7 +38,7 @@
     sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
-        python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev git
+        python3-dev ruby-dev lua5.1 lua5.1-dev libperl-dev
     sudo apt remove vim vim-runtime gvim
     cd ~
     git clone https://github.com/vim/vim.git
@@ -80,16 +81,39 @@
 	./install.sh
 	```
 
-4. Install [zsh][1] and [oh-my-zsh][2]
-	[1]:(https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-	[2]:(https://github.com/robbyrussell/oh-my-zsh)
+5. Install [zsh][1] and [oh-my-zsh][2]
+	[1]:https://github.com/zsh-users/zsh
+	[2]:https://github.com/robbyrussell/oh-my-zsh
 	- Install [zsh][3] from source
-	[3]:(http://blog.byteb.us/oh-my-zsh-debian-tutorial/)
+	[3]:https://github.com/zsh-users/zsh/blob/master/INSTALL
+	```
+	cd
+	sudo apt install build-essential autoconf perl libncurses5-dev yodl
+	git clone https://github.com/zsh-users/zsh.git
+	cd zsh
+	./Util/preconfig
+	./configure --prefix=/usr --bindir=/bin
+	make
+	sudo make install
+	which zsh | sudo tee -a /etc/shells
+	chsh -s "$(which zsh)"
+	```
+	Log out and login back again to use new defaul shell.
 	- Install oh-my-zsh
 	```
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	```
 	
 
-5. Install tmux
+6. Install [tmux](https://github.com/tmux/tmux)
+	```
+	cd
+	sudo apt install build-essential libevent-dev libncurses5-dev make autoconf automake pkg-config
+	git clone https://github.com/tmux/tmux.git
+	cd tmux
+	sh autogen.sh
+	./configure
+	make
+	sudo make install
 
+	```
