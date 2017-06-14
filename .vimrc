@@ -1,3 +1,22 @@
+" common settings
+set hlsearch
+set number
+set smartindent
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
+syntax enable
+
+" for gVim
+if has('gui_running')
+	set background=dark
+	let g:solarized_contrast="high"
+	colorscheme solarized
+	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+endif
+
 " Vundle settings
 set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
@@ -19,25 +38,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
-
-" common settings
-set hlsearch
-set number
-set smartindent
-set smarttab
-set tabstop=4
-set shiftwidth=4
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
-syntax enable
-
-" for gVim
-if has('gui_running')
-	set background=dark
-	let g:solarized_contrast="high"
-	colorscheme solarized
-	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
-endif
 
 " key mapping
 let mapleader=","
