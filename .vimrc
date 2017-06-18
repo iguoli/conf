@@ -1,6 +1,7 @@
 " common settings
 set hlsearch
 set number
+set relativenumber
 set smartindent
 set smarttab
 set tabstop=4
