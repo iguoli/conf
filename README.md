@@ -152,3 +152,27 @@
 	ln -s -f .tmux/.tmux.conf .
 	cp ~/conf/.tmux.conf.local .
 	```
+
+7. Setup fontconfig-infinality
+	- Install fontconfig-infinality
+	```
+	sudo add-apt-repository ppa:no1wantdthisname/ppa
+	sudo apt update
+	sudo apt install fontconfig-infinality
+	```
+	- Create your own font style (Reference /etc/fonts/infinality/README)
+	```
+	cd /etc/fonts/infinality/styles.conf.avail
+	sudo cp -rp linux linux-zh
+	cd linux-zh
+	sudo rm 20-aliases-default-linux.conf
+	sudo cp ~/conf/fontconfig-infinality/20-aliases-default-linux.conf .
+	sudo cp ~/conf/fontconfig-infinality/62-group-chinese-fonts.conf .
+	sudo cp ~/conf/fontconfig-infinality/63-group-chinese-fonts-rendering.conf .
+	```	
+	- Run infctl.sh to set the style
+	```
+	cd /etc/fonts/infinality
+	./infctl.sh setstyle linux-zh
+
+	```
