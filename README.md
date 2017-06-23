@@ -174,5 +174,4 @@
 	```
 	cd /etc/fonts/infinality
 	./infctl.sh setstyle linux-zh
-
 	```
