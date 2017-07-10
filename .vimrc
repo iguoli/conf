@@ -8,6 +8,7 @@ set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
+set backspace=indent,eol,start
 syntax enable
 
 " for gVim
