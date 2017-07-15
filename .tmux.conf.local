@@ -256,7 +256,7 @@ set -g prefix C-a
 bind C-a send-prefix
 
 # join pane from other tmux window
-bind @ command-prompt -p "join pane from:" "join-pane -s ':%%'"
+bind @ command-prompt -p "join pane to:" "join-pane -b -t ':%%'"
 
 # move status line to top
 #set -g status-position top
