@@ -10,6 +10,7 @@ set expandtab
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
+set cursorline
 syntax enable
 
 " for gVim
@@ -39,7 +40,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'DrawIt'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tell-k/vim-autopep8'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
@@ -56,12 +58,22 @@ inoremap <leader><TAB> <Esc>la
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <tab> :bn<CR> 
 
-" YCM configuration
 " 设置YCM默认规则
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion=0
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_filetype_blacklist={}
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
+" python解释器路径
+"let g:ycm_path_to_python_interpreter='/usr/bin/python'
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax = 1
+" 开启注释补全
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" 开启字符串补全
+let g:ycm_complete_in_strings = 1
+" 完成补全后自动关闭预览窗口
+let g:ycm_autoclose_preview_window_after_completion = 0
+" 离开插入模式后自动关闭预览窗口
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_filetype_blacklist = {}
 let g:EclimCompletionMethod = 'omnifunc'
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
@@ -81,6 +93,7 @@ let g:airline_theme='simple'
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
+
 " powerline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
@@ -92,3 +105,10 @@ let g:airline_symbols.linenr = ''
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+
+" 缩进指示线
+let g:indentLine_char = '┆'
+let g:indentLine_enabled = 1
+
+" autopep8设置
+let g:autopep8_disable_show_diff = 1
