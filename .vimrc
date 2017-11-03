@@ -116,3 +116,13 @@ let g:indentLine_enabled = 1
 
 " autopep8设置
 let g:autopep8_disable_show_diff = 1
+
+" Syntastics设置
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
