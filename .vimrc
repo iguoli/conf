@@ -4,22 +4,22 @@ set number
 set relativenumber
 set smartindent
 set smarttab
-set tabstop = 4
-set shiftwidth = 4
+set tabstop=4
+set shiftwidth=4
 set expandtab
-set encoding = utf-8
-set fileencodings = ucs-bom, utf-8, uft-16, gbk, gb18030, big5, latin1
-set backspace = indent, eol, start
+set encoding=utf-8
+set fileencodings=ucs-bom, utf-8, uft-16, gbk, gb18030, big5, latin1
+set backspace=indent, eol, start
 set cursorline
 set cursorcolumn
 syntax enable
 
 " for gVim
 if has('gui_running')
-	set background = dark
+	set background=dark
 	let g:solarized_contrast = "high"
 	colorscheme solarized
-	set guifont = Ubuntu\ Mono\ for\ Powerline:h12
+	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 endif
 
 " Vundle settings
@@ -108,7 +108,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-set laststatus = 2
+set laststatus=2
 
 " 缩进指示线
 let g:indentLine_char = '┆'
@@ -118,9 +118,9 @@ let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff = 1
 
 " Syntastics设置
-set statusline += %#warningmsg#
-set statusline += %{SyntasticStatuslineFlag()}
-set statusline += %*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
