@@ -65,7 +65,7 @@ nnoremap <tab> :bn<CR>
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
 " python解释器路径
-"let g:ycm_path_to_python_interpreter='/usr/bin/python'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 " 开启语义补全
 let g:ycm_seed_identifiers_with_syntax = 1
 " 开启注释补全
