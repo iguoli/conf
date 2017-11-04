@@ -4,22 +4,22 @@ set number
 set relativenumber
 set smartindent
 set smarttab
-set tabstop=4
-set shiftwidth=4
+set tabstop = 4
+set shiftwidth = 4
 set expandtab
-set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
-set backspace=indent,eol,start
+set encoding = utf-8
+set fileencodings = ucs-bom, utf-8, uft-16, gbk, gb18030, big5, latin1
+set backspace = indent, eol, start
 set cursorline
 set cursorcolumn
 syntax enable
 
 " for gVim
 if has('gui_running')
-	set background=dark
-	let g:solarized_contrast="high"
+	set background = dark
+	let g:solarized_contrast = "high"
 	colorscheme solarized
-	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+	set guifont = Ubuntu\ Mono\ for\ Powerline:h12
 endif
 
 " Vundle settings
@@ -50,7 +50,7 @@ call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
 " key mapping
-let mapleader=","
+let mapleader = ","
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
 " 在Normal-mode中直接从光标后进行换行
@@ -63,7 +63,7 @@ inoremap <leader><TAB> <Esc>la
 nnoremap <tab> :bn<CR> 
 
 " 设置YCM默认规则
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
 " python解释器路径
 let g:ycm_python_binary_path = 'python'
 " 开启语义补全
@@ -86,13 +86,13 @@ nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 nnoremap <leader>c :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<F4>"
-let g:UltiSnipsJumpForwardTrigger="<F3>"
-let g:UltiSnipsJumpBackwardTrigger="<F2>"
-let g:UltiSnipsListSnippets="<F5>"
+let g:UltiSnipsExpandTrigger = "<F4>"
+let g:UltiSnipsJumpForwardTrigger = "<F3>"
+let g:UltiSnipsJumpBackwardTrigger = "<F2>"
+let g:UltiSnipsListSnippets = "<F5>"
 
 "设置vim-airline
-let g:airline_theme='simple'
+let g:airline_theme = 'simple'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -108,7 +108,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
+set laststatus = 2
 
 " 缩进指示线
 let g:indentLine_char = '┆'
@@ -118,9 +118,9 @@ let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff = 1
 
 " Syntastics设置
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set statusline += %#warningmsg#
+set statusline += %{SyntasticStatuslineFlag()}
+set statusline += %*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
