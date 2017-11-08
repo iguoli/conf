@@ -3,7 +3,7 @@
 # Setup my working environment step by step
 ## For APT-based system(Debian, Ubuntu, Mint, etc.)
 
-1. Install [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
+### 1. Install [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
     - Install from ppa:max-c-lv/shadowsocks-libev
     ```
     sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
@@ -14,7 +14,7 @@
         edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to `ss-local`.  
         May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
-2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
+### 2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
     - Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
     or  
     - Install from [google linux repository](https://www.google.com/linuxrepositories/)
@@ -24,7 +24,7 @@
     sudo apt update
     sudo apt install google-chrome-stable
     ```
-3. Install [Git](https://github.com/git/git)
+### 3. Install [Git](https://github.com/git/git)
 	- Install git from [ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa)
 	```
 	sudo add-apt-repository ppa:git-core/ppa
@@ -54,7 +54,7 @@
 	git config --global core.editor vim
 	```
  
-4. Install Vim
+### 4. Install Vim
     - Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
     ```
     sudo add-apt-repository ppa:jonathonf/vim
@@ -108,7 +108,7 @@
 	./install.sh
 	```
 
-5. Install [zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+### 5. Install [zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 	- Install [zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL) from source
 	```
 	cd
@@ -132,8 +132,7 @@
 	git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 	```
 	
-
-6. Install [tmux](https://github.com/tmux/tmux)
+### 6. Install [tmux](https://github.com/tmux/tmux)
 	- Install [tmux](https://github.com/tmux/tmux)
 	```
 	cd
@@ -153,7 +152,17 @@
 	cp ~/conf/.tmux.conf.local .
 	```
 
-7. Setup fontconfig-infinality
+### 7. Install virtualenv
+	```
+	sudo apt install virtualenv
+	mkdir py3project
+	cd py3project
+	virtualenv -p python3 venv
+	source venv/bin/activate
+	```
+
+
+### 8. Setup fontconfig-infinality
 	- Install fontconfig-infinality
 	```
 	sudo add-apt-repository ppa:no1wantdthisname/ppa
