@@ -4,7 +4,7 @@
 ## 基于APT-based系统(Debian, Ubuntu, Mint, etc.)
 
 ### 1. 安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
-- 从PPA安装ppa:max-c-lv/shadowsocks-libev
+- 从PPA安装[ppa:max-c-lv/shadowsocks-libev](https://launchpad.net/~max-c-lv/+archive/ubuntu/shadowsocks-libev)
 ```bash
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
 sudo apt update
