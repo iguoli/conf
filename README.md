@@ -76,7 +76,7 @@ chsh -s "$(which zsh)"
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-- 安装[zsh-autosuggestions plugin](https://github.com/zsh-users/zsh-autosuggestions)插件
+- 安装[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)插件
 ```bash
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
@@ -121,13 +121,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ~/conf/.vimrc ~
 vim +PluginInstall +qall
 ```
-- 配置[YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)插件
+- 配置[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)插件
 ```bash
 sudo apt-get install build-essential cmake python-dev python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
-- Install [Powerline fonts](https://github.com/powerline/fonts)
+- 安装[Powerline fonts](https://github.com/powerline/fonts)
 ```bash
 cd ~
 git clone https://github.com/powerline/fonts.git
@@ -165,7 +165,6 @@ source venv/bin/activate
 
 ### 8. 安装[google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
 - 从[google](https://www.google.com/chrome/browser/desktop/index.html)下载deb安装包
-or  
 - 或者使用[google linux repository](https://www.google.com/linuxrepositories/)
 ```bash
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
