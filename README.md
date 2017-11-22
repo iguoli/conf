@@ -5,36 +5,26 @@
 
 ### 1. Install [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
 - Install from ppa:max-c-lv/shadowsocks-libev
-```
+```bash
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
 sudo apt update
-sudo apt install shadowsocks-libev
+sudo apt install -y shadowsocks-libev
 ```
 - Systemd shadowsocks-libev service start ss-server by default, if working as client,  
 edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to `ss-local`.  
 May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
-### 2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
-- Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
-or  
-- Install from [google linux repository](https://www.google.com/linuxrepositories/)
-```
-wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google-chrome.list"
-sudo apt update
-sudo apt install google-chrome-stable
-```
-### 3. Install [Git](https://github.com/git/git)
+### 2. Install [Git](https://github.com/git/git)
 - Install git from [ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa)
-```
+```bash
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
-sudo apt install git
+sudo apt install -y git
 ```
 - Install [git](https://github.com/git/git/blob/master/INSTALL) from source
-```
+```bash
 cd
-sudo apt install build-essential autoconf asciidoc xsltproc
+sudo apt install -y build-essential autoconf asciidoc xsltproc
 curl -L https://github.com/git/git/archive/master.zip -o git.zip
 unzip git.zip
 cd git-master
@@ -44,8 +34,9 @@ make all doc
 sudo make install install-doc install-html
 
 ```
+
 - Config git
-```
+```bash
 git config --global user.name guoli100
 git config --global user.email golotv@163.com
 git config --global credential.helper 'cache --timeout=86400'
@@ -54,15 +45,50 @@ git config --global https.proxy socks5://127.0.0.1:1080
 git config --global core.editor vim
 ```
 
-### 4. Install Vim
-- Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
+### 3. Install [Proxychains-ng](https://github.com/rofl0r/proxychains-ng)
+```bash
+sudo apt install -y build-essential
+git clone https://github.com/rofl0r/proxychains-ng.git
+cd proxychains-ng
+./configure --prefix=/usr --sysconfdir=/etc
+make
+sudo make install
+sudo make install-config (installs proxychains.conf)
 ```
+
+### 4. Install [zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- Install [zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL) from source
+```bash
+cd
+sudo apt install -y build-essential autoconf perl libncurses5-dev yodl
+git clone https://github.com/zsh-users/zsh.git
+cd zsh
+./Util/preconfig
+./configure --prefix=/usr --bindir=/bin
+make
+sudo make install
+which zsh | sudo tee -a /etc/shells
+chsh -s "$(which zsh)"
+```
+Log out and login back again to use new defaul shell.
+- Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+- Install [zsh-autosuggestions plugin](https://github.com/zsh-users/zsh-autosuggestions)
+```bash
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+### 5. Install Vim
+- Install from [ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
+```bash
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
-sudo apt install vim
+sudo apt install -y vim
 ```
 - [Building Vim from source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
-```
+```bash
 sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
 libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
 libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
@@ -89,54 +115,30 @@ sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 sudo update-alternatives --set vi /usr/bin/vim
 ```
 - [Setup Vundle](https://github.com/VundleVim/Vundle.vim)
-```
+```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ~/conf/.vimrc ~
 vim +PluginInstall +qall
 ```
 - Configure [YouCompleteMe plugin](https://github.com/Valloric/YouCompleteMe)
-```
+```bash
 sudo apt-get install build-essential cmake python-dev python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
 - Install [Powerline fonts](https://github.com/powerline/fonts)
-```
+```bash
 cd ~
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
 ```
 
-### 5. Install [zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- Install [zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL) from source
-```
-cd
-sudo apt install build-essential autoconf perl libncurses5-dev yodl
-git clone https://github.com/zsh-users/zsh.git
-cd zsh
-./Util/preconfig
-./configure --prefix=/usr --bindir=/bin
-make
-sudo make install
-which zsh | sudo tee -a /etc/shells
-chsh -s "$(which zsh)"
-```
-Log out and login back again to use new defaul shell.
-- Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-- Install [zsh-autosuggestions plugin](https://github.com/zsh-users/zsh-autosuggestions)
-```
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-```
-
 ### 6. Install [tmux](https://github.com/tmux/tmux)
 - Install [tmux](https://github.com/tmux/tmux)
-```
+```bash
 cd
-sudo apt install build-essential libevent-dev libncurses5-dev autoconf automake pkg-config
+sudo apt install -y build-essential libevent-dev libncurses5-dev autoconf automake pkg-config
 git clone https://github.com/tmux/tmux.git
 cd tmux
 sh autogen.sh
@@ -145,7 +147,7 @@ make
 sudo make install
 ```
 - Install [oh-my-tmux](https://github.com/gpakosz/.tmux)
-```
+```bash
 cd
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf .
@@ -153,24 +155,34 @@ cp ~/conf/.tmux.conf.local .
 ```
 
 ### 7. Install virtualenv
-```
-sudo apt install virtualenv
+```bash
+sudo apt install -y virtualenv
 mkdir py3project
 cd py3project
 virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
+### 2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
+- Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
+or  
+- Install from [google linux repository](https://www.google.com/linuxrepositories/)
+```bash
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google-chrome.list"
+sudo apt update
+sudo apt install -y google-chrome-stable
+```
 
 ### 8. Setup fontconfig-infinality
 - Install fontconfig-infinality
-```
+```bash
 sudo add-apt-repository ppa:no1wantdthisname/ppa
 sudo apt update
-sudo apt install fontconfig-infinality
+sudo apt install -y fontconfig-infinality
 ```
 - Create your own font style (Reference /etc/fonts/infinality/README)
-```
+```bash
 cd /etc/fonts/infinality/styles.conf.avail
 sudo cp -rp linux linux-zh
 cd linux-zh
@@ -180,7 +192,7 @@ sudo cp ~/conf/fontconfig-infinality/62-group-chinese-fonts.conf .
 sudo cp ~/conf/fontconfig-infinality/63-group-chinese-fonts-rendering.conf .
 ```	
 - Run infctl.sh to set the style
-```
+```bash
 cd /etc/fonts/infinality
 ./infctl.sh setstyle linux-zh
 ```
