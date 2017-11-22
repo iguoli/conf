@@ -163,7 +163,7 @@ virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
-### 2. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
+### 8. Install [google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
 - Download deb package from [google](https://www.google.com/chrome/browser/desktop/index.html) directly.  
 or  
 - Install from [google linux repository](https://www.google.com/linuxrepositories/)
@@ -174,7 +174,7 @@ sudo apt update
 sudo apt install -y google-chrome-stable
 ```
 
-### 8. Setup fontconfig-infinality
+### 9. Setup fontconfig-infinality
 - Install fontconfig-infinality
 ```bash
 sudo add-apt-repository ppa:no1wantdthisname/ppa
