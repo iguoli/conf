@@ -61,6 +61,12 @@ bindkey -v
 export EDITOR='vim'
 
 export PIP_REQUIRE_VIRTUALENV=true
+gpip() {
+        PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+gpip3() {
+        PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
 
 # uncomment to set proxy
 #export http_proxy="socks5://127.0.0.1:1080"
