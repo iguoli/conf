@@ -60,7 +60,12 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 export EDITOR='vim'
 
+# Python环境设置
+# 强制PIP在虚拟环境中运行
 export PIP_REQUIRE_VIRTUALENV=true
+# 设置包缓存路径
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# 全局安装pip函数
 gpip() {
         PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
