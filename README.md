@@ -127,6 +127,16 @@ sudo apt-get install build-essential cmake python-dev python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
+- 如果VIM里显示YCM启动不成功，有可能是YCM安装脚本自动下载的LLVM版本不对，可以参考[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)，自己手动安装
+    - 从[LLVM](http://releases.llvm.org/download.html)官网下载最新版本的Clang压缩包并解压到`~/llvm`
+    - 编译ycm_core库
+```bash
+cd ~
+mkdir ycm_build
+cd ycm_build
+cmake -G "Unix Makefiles" . -DPATH_TO_LLVM_ROOT=~/llvm ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cmake --build . --target ycm_core
+```
 - 安装[Powerline fonts](https://github.com/powerline/fonts)
 ```bash
 cd ~
