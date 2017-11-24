@@ -53,8 +53,10 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 let mapleader = ","
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
-" 在Normal-mode中直接从光标后进行换行
-nnoremap <leader><CR> a<CR><Esc>
+" 在Normal-mode中直接在光标处进行换行
+nnoremap <leader><CR> i<CR><Esc>
+" 在Normal-mode中直接换行
+nnoremap <leader>o o<Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
 " 光标后移一个字符
