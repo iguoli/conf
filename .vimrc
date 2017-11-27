@@ -11,7 +11,7 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 syntax enable
 
 " for gVim
@@ -130,4 +130,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers = ["flake8"]
 let g:syntastic_python_flake8_args = '--ignore=E501'
