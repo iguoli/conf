@@ -183,7 +183,20 @@ sudo apt update
 sudo apt install -y google-chrome-stable
 ```
 
-### 9. 设置fontconfig-infinality
+### 9. 安装powerline fonts
+参考[Powerline](https://github.com/powerline/fonts)
+```bash
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+
+### 10. 设置fontconfig-infinality
 - 安装fontconfig-infinality
 ```bash
 sudo add-apt-repository ppa:no1wantdthisname/ppa
