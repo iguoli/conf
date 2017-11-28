@@ -15,7 +15,19 @@ sudo add-apt-repository -r ppa:max-c-lv/shadowsocks-libev
 edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to `ss-local`.  
 May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
-### 2. 安装[Git](https://github.com/git/git)
+### 2.安装[genpac](https://github.com/JinnLynn/genpac)，设置系统代理
+```bash
+# 安装
+$ pip install genpac
+
+# 生成autoproxy.pac文件
+genpac --config-from=~/conf/genpac/config.ini
+
+# 在LinuxMint下通过cinnamon-settings打开系统设置->网络->网络代理
+# 使用自动设置，URL填写'file:///~/autoproxy.pac'
+```
+
+### 3. 安装[Git](https://github.com/git/git)
 - 从PPA安装[ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa)
 ```bash
 sudo add-apt-repository ppa:git-core/ppa
@@ -46,7 +58,7 @@ git config --global https.proxy socks5://127.0.0.1:1080
 git config --global core.editor vim
 ```
 
-### 3. 安装[Proxychains-ng](https://github.com/rofl0r/proxychains-ng)
+### 4. 安装[Proxychains-ng](https://github.com/rofl0r/proxychains-ng)
 ```bash
 sudo apt install -y build-essential
 git clone https://github.com/rofl0r/proxychains-ng.git
@@ -57,7 +69,7 @@ sudo make install
 sudo make install-config (installs proxychains.conf)
 ```
 
-### 4. 安装[zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+### 5. 安装[zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - 从源代码安装[zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL)
 ```bash
 cd
@@ -81,7 +93,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
-### 5. 安装Vim
+### 6. 安装Vim
 - 从PPA安装[ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
 ```bash
 sudo add-apt-repository ppa:jonathonf/vim
@@ -145,7 +157,7 @@ cd fonts
 ./install.sh
 ```
 
-### 6. 安装[tmux](https://github.com/tmux/tmux)
+### 7. 安装[tmux](https://github.com/tmux/tmux)
 ```bash
 cd
 sudo apt install -y build-essential libevent-dev libncurses5-dev autoconf automake pkg-config
@@ -164,7 +176,7 @@ ln -s -f .tmux/.tmux.conf .
 cp ~/conf/.tmux.conf.local .
 ```
 
-### 7. 安装virtualenv
+### 8. 安装virtualenv
 ```bash
 sudo apt install -y virtualenv
 mkdir py3project
@@ -173,7 +185,7 @@ virtualenv -p python3 venv
 source venv/bin/activate
 ```
 
-### 8. 安装[google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
+### 9. 安装[google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
 - 从[google](https://www.google.com/chrome/browser/desktop/index.html)下载deb安装包
 - 或者使用[google linux repository](https://www.google.com/linuxrepositories/)
 ```bash
@@ -183,7 +195,7 @@ sudo apt update
 sudo apt install -y google-chrome-stable
 ```
 
-### 9. 安装powerline fonts
+### 10. 安装powerline fonts
 参考[Powerline](https://github.com/powerline/fonts)
 ```bash
 # clone
@@ -196,7 +208,7 @@ cd ..
 rm -rf fonts
 ```
 
-### 10. 设置fontconfig-infinality
+### 11. 设置fontconfig-infinality
 - 安装fontconfig-infinality
 ```bash
 sudo add-apt-repository ppa:no1wantdthisname/ppa
