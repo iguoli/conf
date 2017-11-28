@@ -12,14 +12,15 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
 "set cursorcolumn
+set background=dark
+colorscheme evening
 syntax enable
 
 " for gVim
 if has('gui_running')
-	set background=dark
-	let g:solarized_contrast = "high"
 	colorscheme solarized
 	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+	let g:solarized_contrast = "high"
 endif
 
 " Vundle settings
