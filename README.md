@@ -24,7 +24,7 @@ $ pip install genpac
 genpac --config-from=~/conf/genpac/config.ini
 
 # 在LinuxMint下通过cinnamon-settings打开系统设置->网络->网络代理
-# 使用自动设置，URL填写'file:///~/autoproxy.pac'
+# 使用自动设置，URL填写'file:///home/username/autoproxy.pac'
 ```
 
 ### 3. 安装[Git](https://github.com/git/git)
