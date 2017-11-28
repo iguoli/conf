@@ -11,9 +11,7 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
-"set cursorcolumn
 set background=dark
-colorscheme evening
 syntax enable
 
 " for gVim
@@ -97,7 +95,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<F2>"
 let g:UltiSnipsListSnippets = "<F5>"
 
 "设置vim-airline
-let g:airline_theme = 'base16_default'
+let g:airline_theme = 'simple'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
