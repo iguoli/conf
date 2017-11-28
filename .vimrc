@@ -97,7 +97,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<F2>"
 let g:UltiSnipsListSnippets = "<F5>"
 
 "设置vim-airline
-let g:airline_theme = 'simple'
+let g:airline_theme = 'base16_default'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
