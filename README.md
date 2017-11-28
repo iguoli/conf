@@ -19,12 +19,12 @@ May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to
 ```bash
 # 安装pip
 $ sudo apt install -y python3-pip
-$ pip3 install --upgrade pip3
+$ pip3 install --upgrade pip
 
 $ pip install genpac
 
 # 生成autoproxy.pac文件
-$ genpac --config-from=~/conf/genpac/config.ini
+$ genpac -c ~/conf/genpac/config.ini
 
 # 在LinuxMint下通过cinnamon-settings打开系统设置->网络->网络代理
 # 使用自动设置，URL填写'file:///home/username/autoproxy.pac'
