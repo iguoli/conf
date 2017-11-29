@@ -16,9 +16,8 @@ syntax enable
 
 " for gVim
 if has('gui_running')
-	colorscheme solarized
+	colorscheme monokai
 	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
-	let g:solarized_contrast = "high"
 endif
 
 " Vundle settings
@@ -40,6 +39,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'sickill/vim-monokai'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'terryma/vim-multiple-cursors'
