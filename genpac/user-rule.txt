@@ -2,4 +2,4 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||cloudera.com
-||discovery.com
+||ocsp.digicert.com
