@@ -17,10 +17,6 @@ May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to
 
 ### 2.安装[genpac](https://github.com/JinnLynn/genpac)，设置系统代理
 ```bash
-# 安装pip
-$ sudo apt install -y python3-pip
-$ pip3 install --upgrade pip
-
 $ pip install genpac
 
 # 生成autoproxy.pac文件

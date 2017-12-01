@@ -2,7 +2,6 @@
 
 ### 安装pip
 ```bash
-# 安装pip
 $ sudo apt install -y python3-pip
 $ pip3 install --upgrade pip
 ```
@@ -23,5 +22,5 @@ $ echo 'AUTOENV_ENABLE_LEAVE="yes" >> ~/.zshrc'
 ### 配置pip.conf
 ```bash
 $ mkdir ~/.pip
-$ cp ~/conf/python/pip.conf
+$ cp ~/conf/python/pip.conf ~/.pip
 ```
