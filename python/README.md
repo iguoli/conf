@@ -15,6 +15,7 @@ $ virtualenv --version
 ### 安装[autoenv](https://github.com/kennethreitz/autoenv)
 ```bash
 $ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+$ echo '# 设置autoenv'
 $ echo 'source ~/.autoenv/activate.sh' >> ~/.zshrc
 $ echo 'AUTOENV_ENABLE_LEAVE="yes"' >> ~/.zshrc
 ```
