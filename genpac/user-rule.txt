@@ -3,3 +3,4 @@
 
 ||cloudera.com
 ||ocsp.digicert.com
+||gitbooks.io
