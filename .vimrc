@@ -17,6 +17,7 @@ syntax enable
 " for gVim
 if has('gui_running')
 	colorscheme monokai
+    hi Search gui=None guifg=black guibg=yellow
 	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 endif
 
