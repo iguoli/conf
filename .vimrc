@@ -13,6 +13,7 @@ set backspace=indent,eol,start
 set cursorline
 set background=dark
 syntax enable
+hi CursorLine cterm=None ctermbg=300
 
 " for gVim
 if has('gui_running')
