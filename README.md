@@ -5,7 +5,7 @@
 
 ### 1. 安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
 - 从PPA安装[ppa:max-c-lv/shadowsocks-libev](https://launchpad.net/~max-c-lv/+archive/ubuntu/shadowsocks-libev)
-```bash
+```zsh
 $ sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
 $ sudo apt update
 $ sudo apt install -y shadowsocks-libev
@@ -16,7 +16,7 @@ edit `/lib/systemd/system/shadowsocks-libev.service` and replace `ss-server` to 
 May also need to edit `/etc/init.d/shadowsocks-libev` and replace `ss-server` to `ss-local`.
 
 ### 2.安装[genpac](https://github.com/JinnLynn/genpac)，设置系统代理
-```bash
+```zsh
 $ pip install genpac
 
 # 生成autoproxy.pac文件
@@ -28,13 +28,13 @@ $ genpac -c ~/conf/genpac/config.ini
 
 ### 3. 安装[Git](https://github.com/git/git)
 - 从PPA安装[ppa:git-core/ppa](https://launchpad.net/~git-core/+archive/ubuntu/ppa)
-```bash
+```zsh
 $ sudo add-apt-repository ppa:git-core/ppa
 $ sudo apt update
 $ sudo apt install -y git
 ```
 - 从源代码安装[git](https://github.com/git/git/blob/master/INSTALL)
-```bash
+```zsh
 $ cd
 $ sudo apt install -y build-essential autoconf asciidoc xsltproc
 $ curl -L https://github.com/git/git/archive/master.zip -o git.zip
@@ -48,7 +48,7 @@ $ sudo make install install-doc install-html
 ```
 
 - 配置git
-```bash
+```zsh
 $ git config --global user.name guoli100
 $ git config --global user.email golotv@163.com
 $ git config --global credential.helper 'cache --timeout=86400'
@@ -58,7 +58,7 @@ $ git config --global core.editor vim
 ```
 
 ### 4. 安装[Proxychains-ng](https://github.com/rofl0r/proxychains-ng)
-```bash
+```zsh
 $ sudo apt install -y build-essential
 $ git clone https://github.com/rofl0r/proxychains-ng.git
 $ cd proxychains-ng
@@ -70,7 +70,7 @@ $ sudo make install-config (installs proxychains.conf)
 
 ### 5. 安装[zsh](https://github.com/zsh-users/zsh) and [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - 从源代码安装[zsh](https://github.com/zsh-users/zsh/blob/master/INSTALL)
-```bash
+```zsh
 $ cd
 $ sudo apt install -y build-essential autoconf perl libncurses5-dev yodl
 $ git clone https://github.com/zsh-users/zsh.git
@@ -84,23 +84,23 @@ $ chsh -s "$(which zsh)"
 ```
 登出当前shell后再重新登入，启用zsh
 - 安装[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-```bash
+```zsh
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 - 安装[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)插件
-```bash
+```zsh
 $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 ### 6. 安装Vim
 - 从PPA安装[ppa:jonathonf/vim](https://launchpad.net/~jonathonf/+archive/ubuntu/vim)(Notice that this Vim don't have python compiled)
-```bash
+```zsh
 $ sudo add-apt-repository ppa:jonathonf/vim
 $ sudo apt update
 $ sudo apt install -y vim
 ```
 - 从源代码安装[Vim](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
-```bash
+```zsh
 $ sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
 libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
 libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
@@ -127,13 +127,13 @@ $ sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 $ sudo update-alternatives --set vi /usr/bin/vim
 ```
 - 安装[Vundle](https://github.com/VundleVim/Vundle.vim)
-```bash
+```zsh
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $ cp ~/conf/.vimrc ~
 $ vim +PluginInstall +qall
 ```
 - 配置[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)插件
-```bash
+```zsh
 $ sudo apt-get install build-essential cmake python-dev python3-dev
 $ cd ~/.vim/bundle/YouCompleteMe
 $ ./install.py --clang-completer
@@ -141,7 +141,7 @@ $ ./install.py --clang-completer
 - 如果VIM里显示YCM启动不成功，有可能是YCM安装脚本自动下载的LLVM版本不对，可以参考[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)，自己手动安装
     - 从[LLVM](http://releases.llvm.org/download.html)官网下载最新版本的Clang压缩包并解压到`~/llvm`
     - 编译ycm_core库
-```bash
+```zsh
 $ cd ~
 mkdir ycm_build
 $ cd ycm_build
@@ -149,7 +149,7 @@ $ cmake -G "Unix Makefiles" . -DPATH_TO_LLVM_ROOT=~/llvm ~/.vim/bundle/YouComple
 $ cmake --build . --target ycm_core
 ```
 - 安装[Powerline fonts](https://github.com/powerline/fonts)
-```bash
+```zsh
 $ cd ~
 $ git clone https://github.com/powerline/fonts.git
 $ cd fonts
@@ -157,7 +157,7 @@ $ ./install.sh
 ```
 
 ### 7. 安装[tmux](https://github.com/tmux/tmux)
-```bash
+```zsh
 $ cd
 $ sudo apt install -y build-essential libevent-dev libncurses5-dev autoconf automake pkg-config
 $ git clone https://github.com/tmux/tmux.git
@@ -168,26 +168,31 @@ $ make
 $ sudo make install
 ```
 - 安装[oh-my-tmux](https://github.com/gpakosz/.tmux)
-```bash
+```zsh
 $ cd
 $ git clone https://github.com/gpakosz/.tmux.git
 $ ln -s -f .tmux/.tmux.conf .
 $ cp ~/conf/.tmux.conf.local .
 ```
 
-### 8. 安装virtualenv
-```bash
+### 8. 安装virtualenv及[autoenv](https://github.com/kennethreitz/autoenv)
+```zsh
+# 安装virtualenv
 $ sudo apt install -y virtualenv
 $ mkdir py3project
 $ cd py3project
 $ virtualenv -p python3 venv
 $ source venv/bin/activate
+
+# 安装autoenv
+$ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+# 在python项目目录下新建.env和.env.leave文件，并在文件里写入shell命令
 ```
 
 ### 9. 安装[google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
 - 从[google](https://www.google.com/chrome/browser/desktop/index.html)下载deb安装包
 - 或者使用[google linux repository](https://www.google.com/linuxrepositories/)
-```bash
+```zsh
 $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 $ sudo sh -c "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google-chrome.list"
 $ sudo apt update
@@ -198,7 +203,7 @@ $ google-chrome --proxy-pac-url='file:///home/username/autoproxy.pac'
 
 ### 10. 安装powerline fonts
 参考[Powerline](https://github.com/powerline/fonts)
-```bash
+```zsh
 # clone
 $ git clone https://github.com/powerline/fonts.git --depth=1
 # install
@@ -211,13 +216,13 @@ $ rm -rf fonts
 
 ### 11. 设置fontconfig-infinality
 - 安装fontconfig-infinality
-```bash
+```zsh
 $ sudo add-apt-repository ppa:no1wantdthisname/ppa
 $ sudo apt update
 $ sudo apt install -y fontconfig-infinality
 ```
 - 创建font style (Reference /etc/fonts/infinality/README)
-```bash
+```zsh
 $ cd /etc/fonts/infinality/styles.conf.avail
 $ sudo cp -rp linux linux-zh
 $ cd linux-zh
@@ -227,7 +232,7 @@ $ sudo cp ~/conf/fontconfig-infinality/62-group-chinese-fonts.conf .
 $ sudo cp ~/conf/fontconfig-infinality/63-group-chinese-fonts-rendering.conf .
 ```	
 - 运行infctl.sh设置style
-```bash
+```zsh
 $ cd /etc/fonts/infinality
 $ ./infctl.sh setstyle linux-zh
 ```
