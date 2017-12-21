@@ -62,9 +62,10 @@ nnoremap <leader>o o<Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
 " 光标后移一个字符
-inoremap <leader><TAB> <Esc>la
+inoremap <leader><Tab> <Esc>la
 " 使用<tab>替代:bn在buffers中切换
-nnoremap <tab> :bn<CR> 
+nnoremap <Tab> :bn<CR> 
+nnoremap <S-Tab> :bp<CR> 
 
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
