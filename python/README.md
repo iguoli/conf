@@ -58,5 +58,7 @@ $ mkdir ~/.pip
 $ cp ~/conf/python/pip.conf ~/.pip
 ```
 
-- Windows系统
-得**pip.ini**文件到`C:\User\Administrator\pip`目录下
+- Windows系统  
+```
+> cp pip.ini %USERPROFILE%\pip\pip.ini
+```
