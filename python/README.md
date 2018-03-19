@@ -1,5 +1,5 @@
 # 设置Python工作环境
-**注意：Windows下载使用pip需要使用管理员命令行模式，否则会报PermissionError错误。
+**注意：Windows下载使用pip需要使用管理员命令行模式，否则会报PermissionError错误。**
 
 ## 安装pip
 ```bash
