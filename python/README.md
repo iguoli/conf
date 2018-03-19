@@ -39,7 +39,7 @@ $ deactivate
 
 - Windows系统
 ```console
-> venv/Scripts/deactivate
+> deactivate
 ```
 
 ## 安装[autoenv](https://github.com/kennethreitz/autoenv)
