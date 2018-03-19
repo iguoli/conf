@@ -6,10 +6,40 @@ $ sudo apt install -y python3-pip
 $ pip3 install --upgrade pip
 ```
 
-## 安装virtualenv
+## 使用virtualenv
+### 安装
 ```bash
 $ pip install virtualenv
 $ virtualenv --version
+```
+
+### 创建venv目录
+```bash
+$ mkdir py3project
+$ cd py3project
+$ virtualenv -p python3 venv
+```
+
+### 激活virtualenv
+- Linux系统
+```bash
+$ source venv/bin/activate
+```
+
+- Windows系统
+```console
+> venv/Scripts/activate
+```
+
+### 停用virtualenv
+- Linux系统
+```bash
+$ deactivate
+```
+
+- Windows系统
+```console
+> venv/Scripts/deactivate
 ```
 
 ## 安装[autoenv](https://github.com/kennethreitz/autoenv)
