@@ -7,3 +7,4 @@
 ||cacher.io
 ||gitbooks.io
 ||mockaroo.com
+||wolframalpha.com
