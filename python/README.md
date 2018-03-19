@@ -1,18 +1,18 @@
 # 设置Python工作环境
 
-### 安装pip
+## 安装pip
 ```bash
 $ sudo apt install -y python3-pip
 $ pip3 install --upgrade pip
 ```
 
-### 安装virtualenv
+## 安装virtualenv
 ```bash
 $ pip install virtualenv
 $ virtualenv --version
 ```
 
-### 安装[autoenv](https://github.com/kennethreitz/autoenv)
+## 安装[autoenv](https://github.com/kennethreitz/autoenv)
 ```bash
 $ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 $ echo '# 设置autoenv'
@@ -20,8 +20,12 @@ $ echo 'source ~/.autoenv/activate.sh' >> ~/.zshrc
 $ echo 'AUTOENV_ENABLE_LEAVE="yes"' >> ~/.zshrc
 ```
 
-### 配置pip.conf
+## 配置pip.conf
+- Linux系统
 ```bash
 $ mkdir ~/.pip
 $ cp ~/conf/python/pip.conf ~/.pip
 ```
+
+- Windows系统
+得**pip.ini**文件到`C:\User\Administrator\pip`目录下
