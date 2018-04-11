@@ -6,5 +6,6 @@
 ||ocsp.digicert.com
 ||cacher.io
 ||gitbooks.io
+||github.io
 ||mockaroo.com
 ||wolframalpha.com
