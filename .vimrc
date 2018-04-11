@@ -53,7 +53,7 @@ call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
 " key mapping
-let mapleader = ","
+let mapleader = ','
 " 使用;cmd替代:cmd进入Command-line
 nnoremap ; :
 " 在Normal-mode中直接在光标处进行换行
