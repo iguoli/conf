@@ -58,7 +58,10 @@ plugins=(git zsh-autosuggestions common-aliases z vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# 在tmux中使用vim-mode
 bindkey -v
+
+# 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
 # Python环境设置
