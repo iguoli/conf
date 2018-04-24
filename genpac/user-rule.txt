@@ -10,3 +10,6 @@
 ||github.com
 ||mockaroo.com
 ||wolframalpha.com
+||stackoverflow.com
+||apache.org
+||databricks.com
