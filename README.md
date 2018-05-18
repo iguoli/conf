@@ -187,6 +187,9 @@ $ source venv/bin/activate
 
 # 安装autoenv
 $ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+$ vim ~/.zshrc
+AUTOENV_ENABLE_LEAVE='yes'
+source ~/.autoenv/activate.sh
 # 在python项目目录下新建.env和.env.leave文件，并在文件里写入shell命令
 $ cd python-project-name
 $ cat .env
