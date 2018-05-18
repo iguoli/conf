@@ -179,7 +179,7 @@ $ cp ~/conf/.tmux.conf.local .
 ```zsh
 # 安装virtualenv
 # sudo apt install -y virtualenv
-# pip3 install virtualenv
+$ pip3 install virtualenv
 $ mkdir python-project-name
 $ cd python-project-name
 $ virtualenv -p python3 venv
