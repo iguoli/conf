@@ -178,15 +178,21 @@ $ cp ~/conf/.tmux.conf.local .
 ### 8. 安装virtualenv及[autoenv](https://github.com/kennethreitz/autoenv)
 ```zsh
 # 安装virtualenv
-$ sudo apt install -y virtualenv
-$ mkdir py3project
-$ cd py3project
+# sudo apt install -y virtualenv
+# pip3 install virtualenv
+$ mkdir python-project-name
+$ cd python-project-name
 $ virtualenv -p python3 venv
 $ source venv/bin/activate
 
 # 安装autoenv
 $ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
 # 在python项目目录下新建.env和.env.leave文件，并在文件里写入shell命令
+$ cd python-project-name
+$ cat .env
+source `dirname $0`/env/bin/activate
+$ cat .env.leave
+deactivate
 ```
 
 ### 9. 安装[google-chrome](https://www.google.com/chrome/browser/desktop/index.html)
