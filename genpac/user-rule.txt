@@ -13,3 +13,6 @@
 ||stackoverflow.com
 ||apache.org
 ||databricks.com
+||mathpapa.com
+||mathway.com
+||geogebra.org
