@@ -15,6 +15,22 @@ set background=dark
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
+" key mapping
+let mapleader = ','
+" 使用;cmd替代:cmd进入Command-line
+nnoremap ; :
+" 在Normal-mode中直接在光标处进行换行
+nnoremap <leader><CR> i<CR><Esc>
+" 在Normal-mode中直接换行
+nnoremap <leader>o o<Esc>
+" 使用,,替代<Esc>进入Normal-mode
+inoremap <leader>, <Esc>
+" 光标后移一个字符
+inoremap <leader><Tab> <Esc>la
+" 使用<tab>替代:bn在buffers中切换
+nnoremap <Tab> :bn<CR> 
+nnoremap <S-Tab> :bp<CR> 
+
 " for gVim
 if has('gui_running')
 	colorscheme monokai
@@ -51,22 +67,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vimcn/vimcdoc'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
-
-" key mapping
-let mapleader = ','
-" 使用;cmd替代:cmd进入Command-line
-nnoremap ; :
-" 在Normal-mode中直接在光标处进行换行
-nnoremap <leader><CR> i<CR><Esc>
-" 在Normal-mode中直接换行
-nnoremap <leader>o o<Esc>
-" 使用,,替代<Esc>进入Normal-mode
-inoremap <leader>, <Esc>
-" 光标后移一个字符
-inoremap <leader><Tab> <Esc>la
-" 使用<tab>替代:bn在buffers中切换
-nnoremap <Tab> :bn<CR> 
-nnoremap <S-Tab> :bp<CR> 
 
 " 设置YCM默认规则
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
