@@ -12,6 +12,7 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
 set background=dark
+colorscheme monokai
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
@@ -33,7 +34,6 @@ nnoremap <S-Tab> :bp<CR>
 
 " for gVim
 if has('gui_running')
-	colorscheme monokai
     hi Search gui=None guifg=black guibg=yellow
 	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
 endif
@@ -47,7 +47,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -68,30 +68,30 @@ Plugin 'vimcn/vimcdoc'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 
-" 设置YCM默认规则
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-" 设置python补全使用的解释器路径
-let g:ycm_python_binary_path = 'python'
-" 设置ycm_server使用的python解释器路径
-let g:ycm_server_python_interpreter = 'python'
-" 开启语义补全
-let g:ycm_seed_identifiers_with_syntax = 1
-" 开启注释补全
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" 开启字符串补全
-let g:ycm_complete_in_strings = 1
-" 完成补全后自动关闭预览窗口
-let g:ycm_autoclose_preview_window_after_completion = 0
-" 离开插入模式后自动关闭预览窗口
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_filetype_blacklist = {}
-let g:EclimCompletionMethod = 'omnifunc'
-nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>r :YcmCompleter GoToReferences<CR>
-nnoremap <leader>c :YcmCompleter GetDoc<CR>
+" " 设置YCM默认规则
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" " 设置python补全使用的解释器路径
+" let g:ycm_python_binary_path = 'python'
+" " 设置ycm_server使用的python解释器路径
+" let g:ycm_server_python_interpreter = 'python'
+" " 开启语义补全
+" let g:ycm_seed_identifiers_with_syntax = 1
+" " 开启注释补全
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" " 开启字符串补全
+" let g:ycm_complete_in_strings = 1
+" " 完成补全后自动关闭预览窗口
+" let g:ycm_autoclose_preview_window_after_completion = 0
+" " 离开插入模式后自动关闭预览窗口
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_filetype_blacklist = {}
+" let g:EclimCompletionMethod = 'omnifunc'
+" nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
+" nnoremap <leader>g :YcmCompleter GoTo<CR>
+" nnoremap <leader>r :YcmCompleter GoToReferences<CR>
+" nnoremap <leader>c :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger = "<F4>"
