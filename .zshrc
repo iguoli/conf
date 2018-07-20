@@ -58,6 +58,15 @@ bindkey -v
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
+# rbenv
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+
+# pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
 # Python环境设置
 # 全局pip函数
 gpip() {
@@ -72,10 +81,8 @@ gpip3() {
 # source ~/.autoenv/activate.sh
 
 # uncomment to set proxy
-#export http_proxy="socks5://127.0.0.1:1080"
-#export https_proxy="socks5://127.0.0.1:1080"
-
-# unset PAGER
+# export http_proxy="socks5://127.0.0.1:1080"
+# export https_proxy="socks5://127.0.0.1:1080"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,10 +106,6 @@ gpip3() {
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tree="tree -C"
 alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias unsetproxy="unset ALL_PROXY"
