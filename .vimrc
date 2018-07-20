@@ -12,7 +12,6 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
 set background=dark
-colorscheme monokai
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
@@ -67,6 +66,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vimcn/vimcdoc'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+colorscheme monokai
 
 " " 设置YCM默认规则
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
