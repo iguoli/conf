@@ -58,24 +58,6 @@ bindkey -v
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
-# rbenv
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
-
-# pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-
-# Python环境设置
-# 全局pip函数
-gpip() {
-        PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-gpip3() {
-        PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
-}
-
 # uncomment to set proxy
 # export http_proxy="socks5://127.0.0.1:1080"
 # export https_proxy="socks5://127.0.0.1:1080"
