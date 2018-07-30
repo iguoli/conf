@@ -124,6 +124,7 @@ set laststatus=2
 " 缩进指示线
 let g:indentLine_char = '┆'
 let g:indentLine_enabled = 1
+let g:indentLine_conceallevel = 0
 
 " autopep8设置
 let g:autopep8_disable_show_diff = 1
