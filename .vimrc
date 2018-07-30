@@ -30,6 +30,9 @@ inoremap <leader><Tab> <Esc>la
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <Tab> :bn<CR> 
 nnoremap <S-Tab> :bp<CR> 
+" 自动插入当前时间
+nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
+inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " for gVim
 if has('gui_running')
