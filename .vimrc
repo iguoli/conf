@@ -12,6 +12,7 @@ set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
 set background=dark
+set pastetoggle=<F4>
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
