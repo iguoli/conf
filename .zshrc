@@ -58,10 +58,6 @@ bindkey -v
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
-# uncomment to set proxy
-# export http_proxy="socks5://127.0.0.1:1080"
-# export https_proxy="socks5://127.0.0.1:1080"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -85,5 +81,5 @@ export EDITOR='vim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias tree="tree -C"
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias unsetproxy="unset ALL_PROXY"
+alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
+alias noproxy="unset all_proxy"
