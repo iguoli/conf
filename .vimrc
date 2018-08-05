@@ -38,7 +38,7 @@ inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 " for gVim
 if has('gui_running')
     hi Search gui=None guifg=black guibg=yellow
-	set guifont=Ubuntu\ Mono\ for\ Powerline:h12
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12
 endif
 
 " Vundle settings
