@@ -97,7 +97,7 @@ colorscheme monokai
 " nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 " nnoremap <leader>g :YcmCompleter GoTo<CR>
 " nnoremap <leader>r :YcmCompleter GoToReferences<CR>
-" nnoremap <leader>c :YcmCompleter GetDoc<CR>
+" nnoremap <leader>t :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
