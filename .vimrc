@@ -27,13 +27,13 @@ nnoremap <leader>o o<Esc>
 " 使用,,替代<Esc>进入Normal-mode
 inoremap <leader>, <Esc>
 " 光标后移一个字符
-inoremap <leader><Tab> <Esc>la
+inoremap <leader>l <Esc>la
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <Tab> :bn<CR> 
 nnoremap <S-Tab> :bp<CR> 
 " 自动插入当前时间
-nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
-inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+" nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
+" inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " for gVim
 if has('gui_running')
@@ -91,6 +91,8 @@ colorscheme monokai
 " let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_filetype_blacklist = {}
 " let g:EclimCompletionMethod = 'omnifunc'
+" let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<S-Tab>', '<Up>']
 " nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 " nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 " nnoremap <leader>g :YcmCompleter GoTo<CR>
@@ -98,10 +100,10 @@ colorscheme monokai
 " nnoremap <leader>c :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger = "<F4>"
-let g:UltiSnipsJumpForwardTrigger = "<F3>"
-let g:UltiSnipsJumpBackwardTrigger = "<F2>"
-let g:UltiSnipsListSnippets = "<F5>"
+let g:UltiSnipsExpandTrigger = "<leader><Tab>"
+let g:UltiSnipsJumpForwardTrigger = "<leader><Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<leader><S-Tab>"
+let g:UltiSnipsListSnippets = "<C-l>"
 
 "设置vim-airline
 let g:airline_theme = 'simple'
