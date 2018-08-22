@@ -18,3 +18,4 @@
 ||geogebra.org
 ||mathstud.io
 ||python.org
+||mozilla.org
