@@ -36,9 +36,13 @@ nnoremap <S-Tab> :bp<CR>
 " inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " for gVim
-if has('gui_running')
+if has("mac") || has("macunix")
+    set guifont=Monaco\ for\ Powerline:h14
+elseif has("win32") || has("win64")
     hi Search gui=None guifg=black guibg=yellow
-	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
+    " set guifont=Monaco\ for\ Powerline:h14:cANSI
+    " set renderoptions=type:directx,renmode:5
 endif
 
 " Vundle settings
