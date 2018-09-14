@@ -41,7 +41,7 @@ if has("mac") || has("macunix")
 elseif has("win32") || has("win64")
     hi Search gui=None guifg=black guibg=yellow
     " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
-    set guifont=Monaco\ for\ Powerline:h10:cANSI
+    set guifont=Monaco\ for\ Powerline:h9:cANSI
     set renderoptions=type:directx,renmode:5
 endif
 
