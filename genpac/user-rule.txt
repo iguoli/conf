@@ -19,3 +19,5 @@
 ||mathstud.io
 ||python.org
 ||mozilla.org
+||keras.io
+||coursera.org
