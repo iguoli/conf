@@ -244,3 +244,18 @@ $ sudo apt install -y google-chrome-stable
 # 设置google通过pac代理上网
 $ google-chrome --proxy-pac-url='file:///home/username/autoproxy.pac'
 ```
+
+### 10. 安装 powerline fonts
+
+参考[Powerline](https://github.com/powerline/fonts)
+
+```zsh
+# clone
+$ git clone https://github.com/powerline/fonts.git --depth=1
+# install
+$ cd fonts
+$ ./install.sh
+# clean-up a bit
+$ cd ..
+$ rm -rf fonts
+```
