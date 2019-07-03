@@ -32,8 +32,8 @@ inoremap <leader>l <Esc>la
 nnoremap <Tab> :bn<CR> 
 nnoremap <S-Tab> :bp<CR> 
 " 自动插入当前时间
-" nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
-" inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
+inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " for gVim
 if has("mac") || has("macunix")
@@ -113,7 +113,7 @@ let g:UltiSnipsListSnippets = "<C-l>"
 let g:airline_theme = 'simple'
 
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 
 " powerline symbols
