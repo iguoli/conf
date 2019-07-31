@@ -3,7 +3,14 @@
 	pager = cat
 [pager]
 	log = less
+    diff = less
 [alias]
-	last = -c pager.log= log -1
+	last = -c pager.log=false log -1
 	unstage = reset HEAD --
 	logs = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short
+[diff]
+	tool = opendiff
+[merge]
+	tool = opendiff
+[difftool]
+	prompt = false
