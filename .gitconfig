@@ -1,16 +1,47 @@
+[user]
+    name = Guo Li
+    email = golotv@gmail.com
+[color]
+    # Enable colors in color-supporting terminals
+    ui = auto
+[color "branch"]
+    # Blue on black is hard to read in git branch -vv: use magenta instead
+    upstream = magenta
 [core]
-	editor = vim
-	pager = cat
+    # Use vim as default editor
+    editor = vim
+    # Don't paginate output by default
+    pager = cat
+    # Global ignore file (not shared)
+    excludefile = ~/.gitignore_global
 [pager]
-	log = less
+    log = less
     diff = less
 [alias]
-	last = -c pager.log=false log -1
-	unstage = reset HEAD --
-	logs = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short
+    # Command shortcuts
+    ci = commit
+    co = checkout
+    st = status
+    last = -c pager.log=false log -3
+    unstage = reset HEAD --
+    # Display more readable one line log
+    logs = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short
 [diff]
-	tool = opendiff
+    # Use better descriptive initials (c, i, w) instead of a/b
+    mnemonicPrefix = true
+    # Show renames/moves as much
+    renames = true
+    # Use FileMerge as default diff tool when running `git diff-tool` on Mac
+    tool = opendiff
+    # Use WinMerge or VSCode as default diff tool on Windows
+    # tool = vscode
 [merge]
-	tool = opendiff
+    # Use FileMerge as default merge tool
+    tool = opendiff
 [difftool]
-	prompt = false
+    prompt = false
+[grep]
+    break = true
+    heading = true
+    linNumber = true
+    extendedRegexp = true
