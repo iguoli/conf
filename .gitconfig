@@ -27,7 +27,7 @@
     # Display more readable one line log
     logs = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short
 [diff]
-    # Use better descriptive initials (c, i, w) instead of a/b
+    # Use better descriptive initials c(ommit), i(ndex), w(ork) instead of a/b
     mnemonicPrefix = true
     # Show renames/moves as much
     renames = true

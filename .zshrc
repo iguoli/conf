@@ -58,7 +58,7 @@ bindkey -v
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
-# Set GNU coreutils to PATH and MANPATH
+# Set GNU coreutils to PATH and MANPATH for mac
 #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
