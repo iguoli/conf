@@ -11,18 +11,18 @@
     # Use vim as default editor
     editor = vim
     # Don't paginate output by default
-    pager = cat
+    pager = less -F -R -X
     # Global ignore file (not shared)
     excludefile = ~/.gitignore_global
 [pager]
-    log = less
-    diff = less
+    # log = less
+    # diff = less
 [alias]
     # Command shortcuts
     ci = commit
     co = checkout
     st = status
-    last = -c pager.log=false log -3
+    last = log -3
     unstage = reset HEAD --
     # Display more readable one line log
     logs = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short
@@ -34,12 +34,18 @@
     # Use FileMerge as default diff tool when running `git diff-tool` on Mac
     tool = opendiff
     # Use WinMerge or VSCode as default diff tool on Windows
-    # tool = vscode
+    # tool = winmerge
 [merge]
-    # Use FileMerge as default merge tool
+    # Use FileMerge as default merge tool on Mac
     tool = opendiff
+    # Use WinMerge or VSCode as default merge tool on Windows
+    # tool = winmerge
 [difftool]
     prompt = false
+[difftool "winmerge"]
+    cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e "$LOCAL" "$REMOTE"
+[mergetool "winmerge"]
+    cdm = 'C:/Program Files/WinMerge/WinMergeU.exe' -e -u -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE" "$MERGED"
 [grep]
     break = true
     heading = true
