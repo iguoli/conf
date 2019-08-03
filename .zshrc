@@ -63,7 +63,10 @@ export EDITOR='vim'
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Set options for GNU less
-#export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+# --quit-if-one-screen --ignore-case --status-column
+# --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD
+# --tabs=4 --no-init --window=-4
+export LESS='-F -i -J -M -R -W -x4 -X -z-4'
 # Set colors for GNU less
 #export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
 #export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
