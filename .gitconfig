@@ -57,7 +57,7 @@
 [difftool "winmerge"]
     cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e "$LOCAL" "$REMOTE"
 [mergetool "winmerge"]
-    cdm = 'C:/Program Files/WinMerge/WinMergeU.exe' -e -u -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE" "$MERGED"
+    cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e -u -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE" "$MERGED"
 [grep]
     break = true
     heading = true
