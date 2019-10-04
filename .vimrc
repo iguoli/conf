@@ -40,9 +40,10 @@ if has("mac") || has("macunix")
     set guifont=Monaco\ for\ Powerline:h14
 elseif has("win32") || has("win64")
     hi Search gui=None guifg=black guibg=yellow
-    " set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
     set guifont=Monaco\ for\ Powerline:h9:cANSI
     set renderoptions=type:directx,renmode:5
+elseif has("gui_running")
+    set guifont=Monaco\ for\ Powerline:h12
 endif
 
 " Vundle settings
