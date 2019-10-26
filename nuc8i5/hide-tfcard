@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mv '/System/Library/CoreServices/Menu Extras/ExpressCard.menu'{,.bak}
+touch '/System/Library/CoreServices/Menu Extras/ExpressCard.menu'
