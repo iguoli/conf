@@ -97,5 +97,5 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias tree="tree -C"
-alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
-alias noproxy="unset all_proxy"
+# alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
+# alias noproxy="unset all_proxy"
