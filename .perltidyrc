@@ -1,0 +1,11 @@
+-l=0     # No line length
+#-ci=4    # Continuation indentation
+-naws    # Don't add wihtespace
+-nola    # Don't outdent labels
+-pt=2    # High parenthesis tightness
+-sbt=2   # High square bracket tightness
+-bt=2    # High brace tightness
+-bt=1    # High block brace tightness
+-nsfs    # No space before semicolon in for loop
+-wn      # Weld nested containers
+-ce      # Enable the cuddled else
