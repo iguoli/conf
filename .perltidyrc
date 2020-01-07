@@ -9,3 +9,5 @@
 -nsfs    # No space before semicolon in for loop
 -wn      # Weld nested containers
 -ce      # Enable the cuddled else
+-boc     # Break at old comma breakpoints
+-bar     # Opening brace always on right
