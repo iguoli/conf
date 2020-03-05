@@ -82,7 +82,7 @@ colorscheme monokai
 " " 设置python补全使用的解释器路径
 " let g:ycm_python_binary_path = 'python'
 " " 设置ycm_server使用的python解释器路径
-" let g:ycm_server_python_interpreter = 'python'
+" let g:ycm_server_python_interpreter = '/usr/bin/python3'
 " " 开启语义补全
 " let g:ycm_seed_identifiers_with_syntax = 1
 " " 开启注释补全
