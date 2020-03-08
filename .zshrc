@@ -58,6 +58,9 @@ bindkey -v
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
+# Set Homebrew-bottles mirror
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
 # Set GNU coreutils to PATH and MANPATH for mac
 #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
