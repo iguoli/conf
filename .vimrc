@@ -63,7 +63,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-fugitive'
+Plugin 'luochen1990/rainbow'                " 彩虹括号增强版
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'
 Plugin 'Yggdroot/indentLine'
@@ -163,3 +163,6 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" 彩虹括号设置
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle"

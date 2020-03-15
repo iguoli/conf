@@ -47,7 +47,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode)
+plugins=(git perl zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,8 +62,12 @@ export EDITOR='vim'
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # Set GNU coreutils to PATH and MANPATH for mac
-#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Set options for GNU less
 # --quit-if-one-screen --ignore-case --status-column
@@ -95,10 +99,21 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# perlbrew
+# source ~/perl5/perlbrew/etc/bashrc
+# export PERLBREW_CPAN_MIRROR=http://mirrors.163.com/cpan/
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+alias typora="open -a typora"
 alias tree="tree -C"
 # alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
 # alias noproxy="unset all_proxy"
