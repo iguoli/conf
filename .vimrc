@@ -24,8 +24,6 @@ nnoremap <Space> :
 nnoremap <leader><CR> i<CR><Esc>
 " 在Normal-mode中直接换行
 nnoremap <leader>o o<Esc>
-" 使用,,替代<Esc>进入Normal-mode
-inoremap <leader>, <Esc>
 " 光标后移一个字符
 inoremap <leader>l <Esc>la
 " 使用<tab>替代:bn在buffers中切换
