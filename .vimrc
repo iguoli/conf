@@ -18,8 +18,8 @@ hi CursorLine cterm=None ctermbg=234
 
 " key mapping
 let mapleader = ','
-" 使用;cmd替代:cmd进入Command-line
-nnoremap ; :
+" 使用 `<Space>cmd` 替代 `:cmd` 进入Command-line
+nnoremap <Space> :
 " 在Normal-mode中直接在光标处进行换行
 nnoremap <leader><CR> i<CR><Esc>
 " 在Normal-mode中直接换行
@@ -82,7 +82,8 @@ colorscheme monokai
 " " 设置python补全使用的解释器路径
 " let g:ycm_python_binary_path = 'python'
 " " 设置ycm_server使用的python解释器路径
-" let g:ycm_server_python_interpreter = '/usr/bin/python3'
+" " (使用`brew --cellar python`提供的python3版本编译ycm)
+" let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
 " " 开启语义补全
 " let g:ycm_seed_identifiers_with_syntax = 1
 " " 开启注释补全
