@@ -82,6 +82,8 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+# Syntax highlight output
+export LESSOPEN="| /usr/local/bin/pygmentize %s"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -113,6 +115,9 @@ eval "$(pyenv virtualenv-init -)"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# Use grc to colorize other commands' output
+alias diff="grc diff"
 alias typora="open -a typora"
 alias tree="tree -C"
 # alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
