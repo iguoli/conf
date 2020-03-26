@@ -83,7 +83,7 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # Syntax highlight output
-export LESSOPEN="| /usr/local/bin/pygmentize %s"
+export LESSOPEN="| /usr/local/bin/pygmentize -O style=solarized-dark %s"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
