@@ -58,11 +58,11 @@
                         ]
                     },
                     {
-                        "description": "Hold CapsLock (⇪) → Super Key (⌃⌥⌘)",
+                        "description": "Hold Let_Control (^) → Super Key (⌃⌥⌘)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "left_control",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -79,6 +79,28 @@
                                         ]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hold CapsLock (⇪) → Left_Control",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
                                 "to_if_alone": [
                                     {
                                         "hold_down_milliseconds": 200,
@@ -87,11 +109,7 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "left_control",
-                                        "modifiers": [
-                                            "left_option",
-                                            "left_command"
-                                        ]
+                                        "key_code": "left_control"
                                     }
                                 ],
                                 "type": "basic"
@@ -162,7 +180,7 @@
                         ]
                     },
                     {
-                        "description": "Hold Semicolon (;) → Left_Control (^)",
+                        "description": "Hold Semicolon (;) → Right_Control (^)",
                         "manipulators": [
                             {
                                 "from": {
@@ -175,7 +193,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_control",
+                                        "key_code": "right_control",
                                         "lazy": true
                                     }
                                 ],
@@ -186,7 +204,7 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "left_control"
+                                        "key_code": "right_control"
                                     }
                                 ],
                                 "type": "basic"
@@ -194,7 +212,7 @@
                         ]
                     },
                     {
-                        "description": "Super Key ✚ hjkl → Arrow key (←↓↑→)",
+                        "description": "Hyper Key ✚ hjkl → Arrow key (←↓↑→)",
                         "manipulators": [
                             {
                                 "from": {
@@ -203,7 +221,8 @@
                                         "mandatory": [
                                             "left_control",
                                             "left_option",
-                                            "left_command"
+                                            "left_command",
+                                            "left_shift"
                                         ],
                                         "optional": [
                                             "any"
@@ -224,7 +243,8 @@
                                         "mandatory": [
                                             "left_control",
                                             "left_option",
-                                            "left_command"
+                                            "left_command",
+                                            "left_shift"
                                         ],
                                         "optional": [
                                             "any"
@@ -245,7 +265,8 @@
                                         "mandatory": [
                                             "left_control",
                                             "left_option",
-                                            "left_command"
+                                            "left_command",
+                                            "left_shift"
                                         ],
                                         "optional": [
                                             "any"
@@ -266,7 +287,8 @@
                                         "mandatory": [
                                             "left_control",
                                             "left_option",
-                                            "left_command"
+                                            "left_command",
+                                            "left_shift"
                                         ],
                                         "optional": [
                                             "any"
