@@ -59,7 +59,7 @@ bindkey -v
 export EDITOR='vim'
 
 # Set Homebrew-bottles mirror
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # Set GNU coreutils to PATH and MANPATH for mac
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
