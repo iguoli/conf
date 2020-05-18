@@ -62,12 +62,14 @@ export EDITOR='vim'
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
 # Set GNU coreutils to PATH and MANPATH for mac
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/file-formula/bin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/file-formula/share/man/man1:$MANPATH"
 
 # Set options for GNU less
 # --quit-if-one-screen --ignore-case --status-column
@@ -83,7 +85,15 @@ export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # Syntax highlight output
-export LESSOPEN="| /usr/local/bin/pygmentize -O style=solarized-dark %s"
+export LESSOPEN="|/usr/local/bin/pygmentize -g -O style=solarized-dark %s"
+# export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+# export LESSCOLORIZER="pygmentize"
+
+# PostgreSQL client
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+# golang
+export PATH="/usr/local/go/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -104,8 +114,15 @@ export LESSOPEN="| /usr/local/bin/pygmentize -O style=solarized-dark %s"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if type pyenv >/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+# nodenv
+if type nodenv >/dev/null 2>&1; then
+    eval "$(nodenv init -)"
+fi
 
 # perlbrew
 # source ~/perl5/perlbrew/etc/bashrc
@@ -120,5 +137,6 @@ eval "$(pyenv virtualenv-init -)"
 alias diff="grc diff"
 alias typora="open -a typora"
 alias tree="tree -C"
-# alias goproxy="export all_proxy=socks5://127.0.0.1:1080"
-# alias noproxy="unset all_proxy"
+alias pcs="proxychains4"
+alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
+alias noproxy="unset all_proxy http_proxy https_proxy"
