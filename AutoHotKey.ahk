@@ -2,12 +2,12 @@
 ;; if tab is toggled, keep the original key code
 
 ;; Hold Tab to Hyper Key
-*Tab::
+Tab::
     Send {Blind}{Ctrl Down}{Shift Down}{Alt Down}{LWin Down}
     cDown := A_TickCount
 return                            
 
-*Tab up::
+Tab up::
     If ((A_TickCount-cDown) < 150)
         Send {Blind}{Ctrl Up}{Shift Up}{Alt Up}{LWin Up}{Tab}
     Else
@@ -35,12 +35,12 @@ return
 return
 
 ;; Left Shift to Esc
-*LShift::
+LShift::
     Send {Blind}{LShift Down}
     cDown := A_TickCount
 return
 
-*LShift up::
+LShift up::
     ; Modify the threshold time (in milliseconds) as necessary
     If ((A_TickCount-cDown) < 150)
         Send {Blind}{LShift Up}{Esc}
