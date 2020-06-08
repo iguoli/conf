@@ -1,6 +1,5 @@
 [user]
     name = Guo, Li
-    email = golotv@gmail.com
 [color]
     # Enable colors in color-supporting terminals
     ui = auto
@@ -12,8 +11,6 @@
     editor = vim
     # Don't paginate output by default
     pager = less -F -R -X
-    # Global ignore file (not shared)
-    excludefile = ~/.gitignore_global
 [pager]
     # log = less
     # diff = less
