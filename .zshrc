@@ -135,8 +135,8 @@ fi
 
 # Use grc to colorize other commands' output
 alias diff="grc diff"
-alias typora="open -a typora"
+# alias typora="open -a typora"
 alias tree="tree -C"
-alias pcs="proxychains4"
-alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
-alias noproxy="unset all_proxy http_proxy https_proxy"
+# alias pcs="proxychains4"
+# alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
+# alias noproxy="unset all_proxy http_proxy https_proxy"
