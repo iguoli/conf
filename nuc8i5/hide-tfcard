@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 
+1. Boot to Recovery OS by restarting your machine and holding down the Command+R keys at startup.
+2. Launch Terminal from the Utilities menu.
+3. Enter the following command: csrutil disable
+4. Close Terminal and Restart the computer.
+
+sudo mount -uw / && killall Finder
+
 mv '/System/Library/CoreServices/Menu Extras/ExpressCard.menu'{,.bak}
 touch '/System/Library/CoreServices/Menu Extras/ExpressCard.menu'

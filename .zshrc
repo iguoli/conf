@@ -47,28 +47,30 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git perl zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode)
+plugins=(git perl zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # 在tmux中使用vim-mode
-bindkey -v
+# bindkey -v
 
 # 可以通过zshrc直接编辑~/.zshrc文件
 export EDITOR='vim'
 
 # Set Homebrew-bottles mirror
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # Set GNU coreutils to PATH and MANPATH for mac
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/file-formula/bin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH="/usr/local/opt/file-formula/share/man/man1:$MANPATH"
 
 # Set options for GNU less
@@ -92,8 +94,8 @@ export LESSOPEN="|/usr/local/bin/pygmentize -g -O style=solarized-dark %s"
 # PostgreSQL client
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-# golang
-export PATH="/usr/local/go/bin:$PATH"
+# Openssl 1.1.1
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -115,6 +117,7 @@ export PATH="/usr/local/go/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if type pyenv >/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
@@ -123,6 +126,16 @@ fi
 if type nodenv >/dev/null 2>&1; then
     eval "$(nodenv init -)"
 fi
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+# Maven
+# export M2_HOME=/usr/local/apache-maven-3.6.3
+# export PATH=$PATH:$M2_HOME/bin
+
+# Sublime Text 3
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # perlbrew
 # source ~/perl5/perlbrew/etc/bashrc
@@ -137,6 +150,6 @@ fi
 alias diff="grc diff"
 # alias typora="open -a typora"
 alias tree="tree -C"
-# alias pcs="proxychains4"
-# alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
-# alias noproxy="unset all_proxy http_proxy https_proxy"
+alias pcs="proxychains4"
+alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
+alias noproxy="unset all_proxy http_proxy https_proxy"
