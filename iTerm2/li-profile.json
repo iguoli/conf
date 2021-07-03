@@ -163,6 +163,11 @@
       "Text" : "[1;2H",
       "Action" : 10
     },
+    "0xf702-0x300000-0x7b" : {
+      "Label" : "",
+      "Action" : 11,
+      "Text" : "0x01"
+    },
     "0xf72b-0x40000" : {
       "Text" : "[1;5F",
       "Action" : 10
@@ -191,9 +196,19 @@
       "Text" : "0x1b",
       "Action" : 11
     },
+    "0xf703-0x300000-0x7c" : {
+      "Label" : "",
+      "Action" : 11,
+      "Text" : "0x05"
+    },
     "0xf703-0x220000" : {
       "Text" : "[1;2C",
       "Action" : 10
+    },
+    "0x7f-0x80000-0x33" : {
+      "Label" : "",
+      "Action" : 11,
+      "Text" : "0x1b 0x08"
     },
     "0xf701-0x240000" : {
       "Text" : "[1;5B",
@@ -202,6 +217,11 @@
     "0xf70d-0x20000" : {
       "Text" : "[21;2~",
       "Action" : 10
+    },
+    "0xf702-0x280000-0x7b" : {
+      "Label" : "",
+      "Action" : 10,
+      "Text" : "b"
     },
     "0xf702-0x260000" : {
       "Text" : "[1;6D",
@@ -235,9 +255,10 @@
       "Text" : "[1;2D",
       "Action" : 10
     },
-    "0xf703-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x43",
-      "Action" : 11
+    "0xf703-0x280000-0x7c" : {
+      "Label" : "",
+      "Action" : 10,
+      "Text" : "f"
     },
     "0xf700-0x240000" : {
       "Text" : "[1;5A",
@@ -255,6 +276,11 @@
       "Text" : "0x1d",
       "Action" : 11
     },
+    "0x7a-0x100000-0x6" : {
+      "Label" : "",
+      "Action" : 11,
+      "Text" : "0x1f"
+    },
     "0xf70f-0x20000" : {
       "Text" : "[24;2~",
       "Action" : 10
@@ -266,10 +292,6 @@
     "0xf701-0x260000" : {
       "Text" : "[1;6B",
       "Action" : 10
-    },
-    "0xf702-0x280000" : {
-      "Text" : "0x1b 0x1b 0x5b 0x44",
-      "Action" : 11
     },
     "0xf72b-0x20000" : {
       "Text" : "[1;2F",
@@ -383,7 +405,7 @@
     "Red Component" : 0.76960963010787964,
     "Blue Component" : 0.70993047952651978
   },
-  "Space" : -1,
+  "Space" : 0,
   "AWDS Tab Directory" : "",
   "AWDS Pane Option" : "No",
   "Command" : "",
