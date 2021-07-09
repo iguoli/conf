@@ -61,18 +61,6 @@ export EDITOR='vim'
 # Set Homebrew-bottles mirror
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
-# Set GNU coreutils to PATH and MANPATH for mac
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/file-formula/bin:$PATH"
-export MANPATH="/usr/local/opt/grep/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export MANPATH="/usr/local/opt/file-formula/share/man/man1:$MANPATH"
-
 # Set options for GNU less
 # --quit-if-one-screen --ignore-case --status-column
 # --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD
@@ -86,32 +74,12 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+#
 # Syntax highlight output
 export LESSOPEN="|/usr/local/bin/pygmentize -g -O style=solarized-dark %s"
-# export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
-# export LESSCOLORIZER="pygmentize"
-
-# PostgreSQL client
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-
-# Openssl 1.1.1
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -129,17 +97,6 @@ fi
 
 # Java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-# Maven
-# export M2_HOME=/usr/local/apache-maven-3.6.3
-# export PATH=$PATH:$M2_HOME/bin
-
-# Sublime Text 3
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-
-# perlbrew
-# source ~/perl5/perlbrew/etc/bashrc
-# export PERLBREW_CPAN_MIRROR=http://mirrors.163.com/cpan/
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
