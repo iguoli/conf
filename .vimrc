@@ -2,6 +2,8 @@
 set hlsearch
 set number
 set relativenumber
+set mouse=nicr
+set wildmenu
 set smartindent
 set smarttab
 set tabstop=4

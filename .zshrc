@@ -105,7 +105,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Use grc to colorize other commands' output
 alias diff="grc diff"
-# alias typora="open -a typora"
 alias tree="tree -C"
 alias pcs="proxychains4"
 alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
