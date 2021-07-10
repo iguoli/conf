@@ -36,9 +36,7 @@ nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
 inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " for gVim
-if has("mac") || has("macunix")
-    set guifont=Monaco\ for\ Powerline:h14
-elseif has("win32") || has("win64")
+if has("win32") || has("win64")
     hi Search gui=None guifg=black guibg=yellow
     set guifont=Monaco\ for\ Powerline:h9:cANSI
     set renderoptions=type:directx,renmode:5
