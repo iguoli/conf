@@ -46,37 +46,27 @@ elseif has("gui_running")
     set guifont=Monaco\ for\ Powerline:h12
 endif
 
-" Setup Vundle
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-surround'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'luochen1990/rainbow'                " 彩虹括号增强版
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'sickill/vim-monokai'
-Plugin 'Yggdroot/indentLine'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vimcn/vimcdoc'
-call vundle#end()            " required
-filetype plugin indent on    " required
-colorscheme monokai
+" vim-plug
+call plug#begin('~/.vim/plugged')
+" Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'                " 彩虹括号增强版
+Plug 'altercation/vim-colors-solarized'
+Plug 'sickill/vim-monokai'
+Plug 'Yggdroot/indentLine'
+Plug 'tell-k/vim-autopep8'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vimcn/vimcdoc'
+call plug#end()
 
 " " 设置YCM默认规则
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
