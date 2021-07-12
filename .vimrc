@@ -13,8 +13,8 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
 set cursorline
-set background=dark
 set pastetoggle=<F4>
+set background=dark
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
@@ -34,15 +34,6 @@ nnoremap <S-Tab> :bp<CR>
 " 自动插入当前时间
 nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
 inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-
-" for gVim
-if has("win32") || has("win64")
-    hi Search gui=None guifg=black guibg=yellow
-    set guifont=Monaco\ for\ Powerline:h9:cANSI
-    set renderoptions=type:directx,renmode:5
-elseif has("gui_running")
-    set guifont=Monaco\ for\ Powerline:h12
-endif
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -65,6 +56,16 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vimcn/vimcdoc'
 call plug#end()
+
+" for gVim
+if has("win32") || has("win64")
+    hi Search gui=None guifg=black guibg=yellow
+    set guifont=Monaco\ for\ Powerline:h9:cANSI
+    set renderoptions=type:directx,renmode:5
+elseif has("gui_running")
+    set guifont=Monaco\ for\ Powerline:h12
+    colorscheme solarized
+endif
 
 " " 设置YCM默认规则
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
