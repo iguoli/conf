@@ -62,8 +62,9 @@ if has("win32") || has("win64")
     hi Search gui=None guifg=black guibg=yellow
     set guifont=Monaco\ for\ Powerline:h9:cANSI
     set renderoptions=type:directx,renmode:5
-elseif has("gui_running")
+elseif has('mac')
     set guifont=Monaco\ for\ Powerline:h12
+elseif has("gui_running")
     colorscheme solarized
 endif
 
