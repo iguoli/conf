@@ -58,13 +58,15 @@ Plug 'vimcn/vimcdoc'
 call plug#end()
 
 " for gVim
-if has("win32") || has("win64")
-    hi Search gui=None guifg=black guibg=yellow
-    set guifont=Monaco\ for\ Powerline:h9:cANSI
-    set renderoptions=type:directx,renmode:5
-elseif has('mac')
-    set guifont=Monaco\ for\ Powerline:h12
-elseif has("gui_running")
+if has("gui_running")
+    if has('mac')
+        set guifont=Monaco\ for\ Powerline:h12
+    elseif has("win32") || has("win64")
+        hi Search gui=None guifg=black guibg=yellow
+        set guifont=Monaco\ for\ Powerline:h9:cANSI
+        set guifontwide=KaiTi:h11
+        set renderoptions=type:directx,renmode:5
+    endif
     colorscheme solarized
 endif
 
