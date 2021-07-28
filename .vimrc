@@ -48,6 +48,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'                " 彩虹括号增强版
 Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tell-k/vim-autopep8'
 Plug 'terryma/vim-multiple-cursors'
@@ -61,14 +63,14 @@ call plug#end()
 " for gVim
 if has("gui_running")
     if has('mac')
-        set guifont=Monaco\ for\ Powerline:h12
+        set guifont=Monaco\ for\ Powerline:h14
     elseif has("win32") || has("win64")
         hi Search gui=None guifg=black guibg=yellow
         set guifont=Monaco\ for\ Powerline:h9:cANSI
         set guifontwide=KaiTi:h11
         set renderoptions=type:directx,renmode:5
     endif
-    colorscheme solarized
+    colorscheme gruvbox
 endif
 
 " " 设置YCM默认规则
