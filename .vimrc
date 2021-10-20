@@ -15,6 +15,8 @@ set backspace=indent,eol,start
 set cursorline
 set pastetoggle=<F4>
 set background=dark
+set lines=35
+set columns=100
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
