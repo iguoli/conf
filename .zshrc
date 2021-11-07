@@ -55,8 +55,10 @@ source $ZSH/oh-my-zsh.sh
 # 在tmux中使用vim-mode
 # bindkey -v
 
-# 可以通过zshrc直接编辑~/.zshrc文件
-export EDITOR='vim'
+bindkey "^B" backward-word
+bindkey "^F" forward-word
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
 
 # Set Homebrew-bottles mirror
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
@@ -74,12 +76,20 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-#
+
 # Syntax highlight output
 export LESSOPEN="|/usr/local/bin/pygmentize -g -O style=solarized-dark %s"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# 可以通过zshrc命令直接编辑~/.zshrc文件
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -95,7 +105,7 @@ if type nodenv >/dev/null 2>&1; then
     eval "$(nodenv init -)"
 fi
 
-# Java
+# Java on macOS
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -104,8 +114,13 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # For a full list of active aliases, run `alias`.
 
 # Use grc to colorize other commands' output
-alias diff="grc diff"
 alias tree="tree -C"
 alias pcs="proxychains4"
 alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
 alias noproxy="unset all_proxy http_proxy https_proxy"
+
+# Use grc with supported commands
+[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
