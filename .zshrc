@@ -78,7 +78,7 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # Syntax highlight output
-export LESSOPEN="|/usr/local/bin/pygmentize -g -O style=solarized-dark %s"
+export LESSOPEN="|$(brew --prefix)/bin/pygmentize -g -O style=solarized-dark %s"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -92,9 +92,9 @@ else
 fi
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if type pyenv >/dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
@@ -106,7 +106,7 @@ if type nodenv >/dev/null 2>&1; then
 fi
 
 # Java on macOS
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -120,7 +120,4 @@ alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.
 alias noproxy="unset all_proxy http_proxy https_proxy"
 
 # Use grc with supported commands
-[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+[[ -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
