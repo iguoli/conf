@@ -49,6 +49,8 @@ HYPHEN_INSENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git perl zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode docker)
 
+zstyle ':completion:*:ssh:*' hosts off
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -60,8 +62,14 @@ bindkey "^F" forward-word
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
-# Set Homebrew-bottles mirror
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+# export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+# export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+# export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+# export MANPATH="$(brew --prefix)/opt/grep/libexec/gnuman:$MANPATH"
+# export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
+# export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
+# export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # Set options for GNU less
 # --quit-if-one-screen --ignore-case --status-column
@@ -93,10 +101,11 @@ fi
 
 # pyenv
 if type pyenv >/dev/null 2>&1; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
+fi
+
+# pyenv-virtualenv
+if type pyenv-virtualenv >/dev/null 2>&1; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
@@ -106,7 +115,9 @@ if type nodenv >/dev/null 2>&1; then
 fi
 
 # Java on macOS
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+if type java >/dev/null 2>&1; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
