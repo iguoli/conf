@@ -62,15 +62,6 @@ bindkey "^F" forward-word
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
-# export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
-# export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
-# export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
-# export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-# export MANPATH="$(brew --prefix)/opt/grep/libexec/gnuman:$MANPATH"
-# export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
-# export MANPATH="$(brew --prefix)/opt/findutils/libexec/gnuman:$MANPATH"
-# export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
-
 # Set options for GNU less
 # --quit-if-one-screen --ignore-case --status-column
 # --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD
