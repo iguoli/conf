@@ -77,7 +77,9 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # Syntax highlight output
-export LESSOPEN="|$(brew --prefix)/bin/pygmentize -g -O style=solarized-dark %s"
+if type pygmentize >/dev/null; then
+    export LESSOPEN="|pygmentize -g -O style=solarized-dark %s"
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -87,7 +89,7 @@ export LESSOPEN="|$(brew --prefix)/bin/pygmentize -g -O style=solarized-dark %s"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='gvim'
 fi
 
 # pyenv
@@ -107,7 +109,14 @@ fi
 
 # Java on macOS
 if type java >/dev/null 2>&1; then
-    export JAVA_HOME=$(/usr/libexec/java_home)
+    case $(uname) in
+        Darwin)
+            export JAVA_HOME=$(/usr/libexec/java_home)
+            ;;
+        Linux)
+            export JAVA_HOME=$(readlink -f $(which java) | sed 's:/bin/java::')
+            ;;
+    esac
 fi
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
