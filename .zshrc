@@ -131,4 +131,4 @@ alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.
 alias noproxy="unset all_proxy http_proxy https_proxy"
 
 # Use grc with supported commands
-[[ -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
+[[ $(uname) == "Darwin" &&  -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
