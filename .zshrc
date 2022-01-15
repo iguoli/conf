@@ -119,6 +119,16 @@ if type java >/dev/null 2>&1; then
     esac
 fi
 
+# Use grc with supported commands
+case $(uname) in
+    Darwin)
+        [[ -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
+        ;;
+    Linux)
+        [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+        ;;
+esac
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -129,6 +139,3 @@ alias tree="tree -C"
 alias pcs="proxychains4"
 alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"
 alias noproxy="unset all_proxy http_proxy https_proxy"
-
-# Use grc with supported commands
-[[ $(uname) == "Darwin" &&  -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
