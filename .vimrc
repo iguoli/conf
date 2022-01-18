@@ -75,6 +75,15 @@ if has("gui_running")
     colorscheme gruvbox
 endif
 
+" the cursor style
+if exists('$TMUX')
+    let &t_SI .= "\<Esc>Ptmux;\<Esc>\<Esc>[6 q\<Esc>\\"
+    let &t_EI .= "\<Esc>Ptmux;\<Esc>\<Esc>[2 q\<Esc>\\"
+else
+    let &t_SI .= "\<Esc>[6 q"
+    let &t_EI .= "\<Esc>[2 q"
+endif
+
 " " 设置YCM默认规则
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " " 设置python补全使用的解释器路径
