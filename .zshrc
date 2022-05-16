@@ -103,8 +103,10 @@ if type pyenv-virtualenv >/dev/null 2>&1; then
 fi
 
 # nodenv
-if type nodenv >/dev/null 2>&1; then
-    eval "$(nodenv init -)"
+if type nvm >/dev/null 2>&1; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 fi
 
 # Java on macOS
