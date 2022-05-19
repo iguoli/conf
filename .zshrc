@@ -85,29 +85,13 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# 可以通过zshrc命令直接编辑~/.zshrc文件
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='gvim'
 fi
 
-# pyenv
-if type pyenv >/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
-
-# pyenv-virtualenv
-if type pyenv-virtualenv >/dev/null 2>&1; then
-    eval "$(pyenv virtualenv-init -)"
-fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# Java on macOS
+# Java settings on macOS and Linux
 if type java >/dev/null 2>&1; then
     case $(uname) in
         Darwin)
@@ -134,7 +118,6 @@ esac
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Use grc to colorize other commands' output
 alias tree="tree -C"
 alias pcs="proxychains4"
 alias goproxy="export all_proxy=socks5://127.0.0.1:7891 http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890"

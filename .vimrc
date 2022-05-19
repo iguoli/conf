@@ -15,8 +15,6 @@ set backspace=indent,eol,start
 set cursorline
 set pastetoggle=<F4>
 set background=dark
-set lines=35
-set columns=100
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
@@ -72,6 +70,9 @@ if has("gui_running")
         set guifontwide=KaiTi:h11
         set renderoptions=type:directx,renmode:5
     endif
+
+    set lines=35
+    set columns=100
     colorscheme gruvbox
 endif
 
