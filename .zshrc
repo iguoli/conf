@@ -85,11 +85,7 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='gvim'
-fi
+export EDITOR='vim'
 
 # Java settings on macOS and Linux
 if type java >/dev/null 2>&1; then
@@ -112,6 +108,19 @@ case $(uname) in
         [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
         ;;
 esac
+
+# Personal functions
+printcert () {
+    cmd="openssl x509 -noout -in $1 -subject -dates -ext subjectAltName";
+    printf "\n%s\n\n" "${cmd}";
+    eval "${cmd}"
+}
+
+print_certchain () {
+    cmd="openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text | grep -P '(Subject|Not Before|Not After\s|DNS):'"
+    printf "\n%s\n\n" "${cmd}";
+    eval "${cmd}"
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
