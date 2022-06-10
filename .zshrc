@@ -110,7 +110,7 @@ case $(uname) in
         ;;
 esac
 
-# Personal functions
+# Set personal functions
 printcert () {
     cmd="openssl x509 -noout -in $1 -subject -dates -ext subjectAltName";
     printf "\n%s\n\n" "${cmd}";
