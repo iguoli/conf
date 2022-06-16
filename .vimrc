@@ -142,7 +142,7 @@ set laststatus=2
 let g:indentLine_char = '┆'
 let g:indentLine_enabled = 1
 let g:indentLine_conceallevel = 2
-let g:indentLine_concealcursor = 'nc'
+let g:indentLine_concealcursor = 'c'
 
 " autopep8设置
 let g:autopep8_disable_show_diff = 1
