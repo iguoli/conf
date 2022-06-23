@@ -26,8 +26,8 @@ nnoremap <Space> :
 nnoremap <leader><CR> i<CR><Esc>
 " 在Normal-mode中直接换行
 nnoremap <leader>o o<Esc>
-" 光标后移一个字符
-inoremap <leader>l <Esc>la
+" 在Normal-mode中格式化json文本
+nnoremap <leader>j :%!jq .<CR>
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <Tab> :bn<CR> 
 nnoremap <S-Tab> :bp<CR> 
