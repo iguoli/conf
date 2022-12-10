@@ -1,0 +1,53 @@
+--- rc	2022-12-11 00:09:32.652381955 +0800
++++ .zshrc	2022-06-12 10:06:24.366611497 +0800
+@@ -1,5 +1,5 @@
+ # If you come from bash you might have to change your $PATH.
+-export PATH='/mnt/c/Users/lguo5/AppData/Local/Programs/Microsoft VS Code/bin':$PATH
++# export PATH=$HOME/bin:/usr/local/bin:$PATH
+ 
+ # Path to your oh-my-zsh installation.
+ export ZSH=~/.oh-my-zsh
+@@ -82,9 +82,6 @@
+     export LESSOPEN="|pygmentize -g -O style=solarized-dark %s"
+ fi
+ 
+-# Set docker shared socket
+-export DOCKER_HOST="unix:///mnt/wsl/shared-docker/docker.sock"
+-
+ # You may need to manually set your language environment
+ # export LANG=en_US.UTF-8
+ 
+@@ -103,14 +100,6 @@
+     esac
+ fi
+ 
+-# pyenv
+-export PYENV_ROOT="$HOME/.pyenv"
+-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+-command -v pyenv >/dev/null && eval "$(pyenv init -)"
+-
+-# pyenv-virtualenv
+-command -v pyenv-virtualenv >/dev/null && eval "$(pyenv virtualenv-init -)"
+-
+ # Use grc with supported commands
+ case $(uname) in
+     Darwin)
+@@ -134,17 +123,12 @@
+     eval "${cmd}"
+ }
+ 
+-# Create a SOCKS proxy via autossh
+-autossh -M 10090 -Nf -D 10080 defrtbmw008
+-
+ # Set personal aliases, overriding those provided by oh-my-zsh libs,
+ # plugins, and themes. Aliases can be placed here, though oh-my-zsh
+ # users are encouraged to define aliases within the ZSH_CUSTOM folder.
+ # For a full list of active aliases, run `alias`.
+ 
+-alias dco=docker-compose
+ alias tree="tree -C"
+ alias pcs="proxychains4"
+ alias goproxy="export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891"
+-alias noproxy="unset http_proxy https_proxy all_proxy" 
+-alias open=/mnt/c/Windows/explorer.exe
++alias noproxy="unset http_proxy https_proxy all_proxy"
