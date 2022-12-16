@@ -6,18 +6,42 @@
         {
             "command": 
             {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "alt+8"
+        },
+        {
+            "command": "find",
+            "keys": "alt+f"
+        },
+        {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "alt+c"
         },
         {
-            "command": "unbound",
-            "keys": "alt+f4"
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 2
+            },
+            "keys": "alt+3"
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+w"
+            "keys": "alt+f4"
         },
         {
             "command": "unbound",
@@ -92,20 +116,8 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "alt+8"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 3
-            },
-            "keys": "alt+4"
+            "command": "unbound",
+            "keys": "ctrl+w"
         },
         {
             "command": 
@@ -114,6 +126,14 @@
                 "split": "down"
             },
             "keys": "alt+d"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 3
+            },
+            "keys": "alt+4"
         },
         {
             "command": "closeWindow"
@@ -126,10 +146,6 @@
             "keys": "alt+n"
         },
         {
-            "command": "paste",
-            "keys": "alt+v"
-        },
-        {
             "command": 
             {
                 "action": "newTab"
@@ -137,16 +153,8 @@
             "keys": "alt+t"
         },
         {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "right"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": "find",
-            "keys": "alt+f"
+            "command": "paste",
+            "keys": "alt+v"
         },
         {
             "command": 
@@ -160,14 +168,6 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 4
-            },
-            "keys": "alt+5"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
                 "index": 1
             },
             "keys": "alt+2"
@@ -175,10 +175,10 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            }
+                "action": "switchToTab",
+                "index": 4
+            },
+            "keys": "alt+5"
         },
         {
             "command": 
@@ -191,14 +191,29 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 5
+                "action": "closeTab"
             },
-            "keys": "alt+6"
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            }
         },
         {
             "command": "closePane",
             "keys": "alt+w"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 5
+            },
+            "keys": "alt+6"
         },
         {
             "command": 
@@ -212,29 +227,14 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 2
-            },
-            "keys": "alt+3"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
                 "index": 6
             },
             "keys": "alt+7"
-        },
-        {
-            "command": 
-            {
-                "action": "closeTab"
-            },
-            "keys": "ctrl+w"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "defaultProfile": "{49136478-001c-57da-ac8f-168a5f7a5bbf}",
     "focusFollowMouse": true,
     "initialCols": 130,
     "initialRows": 40,
@@ -250,7 +250,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "Monaco for Powerline",
+                "face": "Fira Code Retina",
                 "size": 10
             },
             "intenseTextStyle": "bright"
@@ -266,12 +266,6 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -293,6 +287,31 @@
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": false
+            },
+            {
+                "colorScheme": "GruvboxDarkHard",
+                "commandline": "C:\\windows\\system32\\wsl.exe -d Fedora-36",
+                "font": 
+                {
+                    "face": "Fira Code Retina"
+                },
+                "guid": "{49136478-001c-57da-ac8f-168a5f7a5bbf}",
+                "hidden": false,
+                "icon": "C:\\Users\\lguo5\\OneDrive - DXC Production\\Documents\\Fedora_icon.png",
+                "name": "Fedora-36",
+                "source": "Windows.Terminal.Wsl",
+                "tabTitle": null
+            },
+            {
+                "font": 
+                {
+                    "face": "Fira Code Retina"
+                },
+                "guid": "{82e89d13-6048-53f3-9449-0dd89501d7d9}",
+                "hidden": false,
+                "icon": "C:\\Users\\lguo5\\OneDrive - DXC Production\\Documents\\Fedora_icon.png",
+                "name": "Fedora37",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -345,6 +364,52 @@
             "yellow": "#C19C00"
         },
         {
+            "background": "#1E1F29",
+            "black": "#000000",
+            "blue": "#BD93F9",
+            "brightBlack": "#555555",
+            "brightBlue": "#BD93F9",
+            "brightCyan": "#8BE9FD",
+            "brightGreen": "#50FA7B",
+            "brightPurple": "#FF79C6",
+            "brightRed": "#FF5555",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F1FA8C",
+            "cursorColor": "#BBBBBB",
+            "cyan": "#8BE9FD",
+            "foreground": "#F8F8F2",
+            "green": "#50FA7B",
+            "name": "Dracula",
+            "purple": "#FF79C6",
+            "red": "#FF5555",
+            "selectionBackground": "#44475A",
+            "white": "#BBBBBB",
+            "yellow": "#F1FA8C"
+        },
+        {
+            "background": "#212121",
+            "black": "#21222C",
+            "blue": "#82AAFF",
+            "brightBlack": "#545454",
+            "brightBlue": "#D6ACFF",
+            "brightCyan": "#A4FFFF",
+            "brightGreen": "#69FF94",
+            "brightPurple": "#FF92DF",
+            "brightRed": "#FF6E6E",
+            "brightWhite": "#F8F8F2",
+            "brightYellow": "#FFCB6B",
+            "cursorColor": "#ECEFF4",
+            "cyan": "#8BE9FD",
+            "foreground": "#F8F8F2",
+            "green": "#50FA7B",
+            "name": "Dracula+",
+            "purple": "#C792EA",
+            "red": "#FF5555",
+            "selectionBackground": "#F8F8F2",
+            "white": "#F8F8F2",
+            "yellow": "#FFCB6B"
+        },
+        {
             "background": "#282828",
             "black": "#282828",
             "blue": "#458588",
@@ -365,6 +430,29 @@
             "red": "#CC241D",
             "selectionBackground": "#FFFFFF",
             "white": "#A89984",
+            "yellow": "#D79921"
+        },
+        {
+            "background": "#1D2021",
+            "black": "#1D2021",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#458588",
+            "brightCyan": "#689D6A",
+            "brightGreen": "#98971A",
+            "brightPurple": "#B16286",
+            "brightRed": "#CC241D",
+            "brightWhite": "#EBDBB2",
+            "brightYellow": "#D79921",
+            "cursorColor": "#EBDBB2",
+            "cyan": "#689D6A",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "GruvboxDarkHard",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#665C54",
+            "white": "#EBDBB2",
             "yellow": "#D79921"
         },
         {

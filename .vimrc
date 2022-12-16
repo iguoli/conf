@@ -31,8 +31,8 @@ nnoremap <leader>j :set ft=json<CR>:%!jq .<CR>
 " 在 Normal-mode 中以文件类型进行折叠
 nnoremap <leader>z :set fdm=syntax<CR>
 " 使用<tab>替代:bn在buffers中切换
-nnoremap <Tab> :bn<CR> 
-nnoremap <S-Tab> :bp<CR> 
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 " 自动插入当前时间
 nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
 inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
@@ -122,23 +122,25 @@ let g:UltiSnipsJumpBackwardTrigger = "<leader><S-Tab>"
 let g:UltiSnipsListSnippets = "<C-l>"
 
 "设置vim-airline
-let g:airline_theme = 'simple'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
+" powerline symbols
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" powerline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = ' '
+let g:airline_symbols.colnr = 'col:'
+let g:airline_symbols.dirty='⚡'
 
 " 缩进指示线
 let g:indentLine_char = '┆'
