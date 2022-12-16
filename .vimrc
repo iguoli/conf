@@ -75,7 +75,7 @@ if has("gui_running")
 
     set lines=35
     set columns=100
-    colorscheme gruvbox
+    colorscheme dracula
 endif
 
 " the cursor style
