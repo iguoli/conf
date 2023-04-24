@@ -38,22 +38,31 @@
 [diff]
     # Use better descriptive initials c(ommit), i(ndex), w(ork) instead of a/b
     mnemonicPrefix = true
+
     # Show renames/moves as much
     renames = true
+
     # Use Beyond Compare as default diff tool when running `git diff-tool` on Mac or Windows
     # Use bc3 on the command line for BC version 4. Caused by git legacy support from Linux
     tool = bc3
+
     # Use WinMerge as default diff tool on Windows
     # tool = winmerge
 [difftool]
     prompt = false
+[difftool "bc3"]
+    # BComp.exe should be in $PATH
+    cmd = "BComp.exe" "$(wslpath -aw $LOCAL)" "$(wslpath -aw $REMOTE)"
+    trustExitCode = true
 [difftool "winmerge"]
-    cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e "$LOCAL" "$REMOTE"
+    cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e "$(wslpath -aw $LOCAL)" "$(wslpath -aw $REMOTE)"
 [merge]
     # Use Beyond Compare as default merge tool on Mac
     # Use bc3 on the command line for BC version 4. Caused by git legacy support from Linux
     tool = bc3
 [mergetool "bc3"]
+    # BComp.exe should be in $PATH
+    cmd = "BComp.exe" "$(wslpath -aw $LOCAL)" "$(wslpath -aw $REMOTE)" "$(wslpath -aw $BASE)" "$(wslpath -aw $MERGED)"
     trustExitCode = true
 [mergetool "winmerge"]
     cmd = 'C:/Program Files/WinMerge/WinMergeU.exe' -e -u -dl "Base" -dr "Mine" "$LOCAL" "$REMOTE" "$MERGED"
