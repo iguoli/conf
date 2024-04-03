@@ -72,7 +72,7 @@ if has("gui_running")
         set guifont=Monaco\ for\ Powerline:h14
     elseif has("win32") || has("win64")
         hi Search gui=None guifg=black guibg=yellow
-        set guifont=Monaco\ for\ Powerline:h9:cANSI
+        set guifont=CamingoCode\ Nerd\ Font:h11:cANSI
         set guifontwide=NSimSun:h11
         set renderoptions=type:directx,renmode:5
     endif
