@@ -6,8 +6,8 @@ set mouse=nicr
 set wildmenu
 set smartindent
 set smarttab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
@@ -40,7 +40,7 @@ inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 " vim-plug
 call plug#begin('~/.vim/plugged')
 " Utilities
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Exafunction/codeium.vim'
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
 Plug 'schickling/vim-bufonly'
 Plug 'SirVer/ultisnips'
@@ -90,34 +90,6 @@ else
     let &t_SI .= "\<Esc>[6 q"
     let &t_EI .= "\<Esc>[2 q"
 endif
-
-" " 设置YCM默认规则
-" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-" " 设置python补全使用的解释器路径
-" let g:ycm_python_binary_path = 'python'
-" " 设置ycm_server使用的python解释器路径
-" " (使用`brew --cellar python`提供的python3版本编译ycm)
-" let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
-" " 开启语义补全
-" let g:ycm_seed_identifiers_with_syntax = 1
-" " 开启注释补全
-" let g:ycm_complete_in_comments = 1
-" let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" " 开启字符串补全
-" let g:ycm_complete_in_strings = 1
-" " 完成补全后自动关闭预览窗口
-" let g:ycm_autoclose_preview_window_after_completion = 0
-" " 离开插入模式后自动关闭预览窗口
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-" let g:ycm_filetype_blacklist = {}
-" let g:EclimCompletionMethod = 'omnifunc'
-" let g:ycm_key_list_select_completion = ['<Tab>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<S-Tab>', '<Up>']
-" nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
-" nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
-" nnoremap <leader>g :YcmCompleter GoTo<CR>
-" nnoremap <leader>r :YcmCompleter GoToReferences<CR>
-" nnoremap <leader>t :YcmCompleter GetDoc<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger = "<leader><Tab>"
