@@ -38,7 +38,7 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -47,7 +47,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git perl zsh-autosuggestions zsh-syntax-highlighting common-aliases z vi-mode docker)
+plugins=(fzf git perl common-aliases z vi-mode docker docker-compose zsh-autosuggestions zsh-syntax-highlighting)
 
 zstyle ':completion:*:ssh:*' hosts off
 
@@ -131,4 +131,4 @@ print_certchain () {
 alias tree="tree -C"
 alias pcs="proxychains4"
 alias goproxy="export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891"
-alias noproxy="unset http_proxy https_proxy all_proxy"
+alias noproxy="unset all_proxy http_proxy https_proxy"
