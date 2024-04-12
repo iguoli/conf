@@ -55,8 +55,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
-Plug 'sickill/vim-monokai'
-Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 " Program enhancement
 Plug 'Yggdroot/indentLine'
@@ -69,7 +67,7 @@ call plug#end()
 " for gVim
 if has("gui_running")
     if has('mac')
-        set guifont=Monaco\ for\ Powerline:h14
+        set guifont=CamingoCode\ Nerd\ Font:h14
     elseif has("win32") || has("win64")
         hi Search gui=None guifg=black guibg=yellow
         set guifont=CamingoCode\ Nerd\ Font:h11:cANSI
