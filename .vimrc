@@ -56,7 +56,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
-" Program enhancement
+" Programming enhancement
 Plug 'Yggdroot/indentLine'
 Plug 'tell-k/vim-autopep8'
 Plug 'scrooloose/syntastic'
