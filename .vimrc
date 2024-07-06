@@ -2,7 +2,7 @@
 set hlsearch
 set number
 set relativenumber
-set mouse=nicr
+set mouse=a
 set wildmenu
 set smartindent
 set smarttab
@@ -18,14 +18,18 @@ set background=dark
 syntax enable
 hi CursorLine cterm=None ctermbg=234
 
+" Set colorscheme
+try
+    colorscheme dracula
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme default
+endtry
+
 " key mapping
 let mapleader = ','
+
 " 使用 `<Space>cmd` 替代 `:cmd` 进入Command-line
 nnoremap <Space> :
-" 在Normal-mode中直接在光标处进行换行
-nnoremap <leader><CR> i<CR><Esc>
-" 在Normal-mode中直接换行
-nnoremap <leader>o o<Esc>
 " 在Normal-mode中格式化json文本
 nnoremap <leader>j :set ft=json<CR>:%!jq .<CR>
 " 在 Normal-mode 中以文件类型进行折叠
@@ -33,9 +37,6 @@ nnoremap <leader>z :set fdm=syntax<CR>
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
-" 自动插入当前时间
-nnoremap <F3> "=strftime("%Y-%m-%d %H:%M:%S")<CR>P
-inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
@@ -43,19 +44,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'Exafunction/codeium.vim'
 Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
 Plug 'schickling/vim-bufonly'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'                " 彩虹括号增强版
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
-" Themes
+
+" UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'altercation/vim-colors-solarized'
 Plug 'dracula/vim'
+
 " Programming enhancement
 Plug 'Yggdroot/indentLine'
 Plug 'tell-k/vim-autopep8'
@@ -77,7 +77,6 @@ if has("gui_running")
 
     set lines=35
     set columns=100
-    colorscheme dracula
 endif
 
 " the cursor style
@@ -88,12 +87,6 @@ else
     let &t_SI .= "\<Esc>[6 q"
     let &t_EI .= "\<Esc>[2 q"
 endif
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger = "<leader><Tab>"
-let g:UltiSnipsJumpForwardTrigger = "<leader><Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<leader><S-Tab>"
-let g:UltiSnipsListSnippets = "<C-l>"
 
 "设置vim-airline
 let g:airline_powerline_fonts = 1
