@@ -54,81 +54,13 @@ zstyle ':completion:*:ssh:*' hosts off
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-# 在tmux中使用vim-mode
-# bindkey -v
-
-bindkey "^B" backward-word
-bindkey "^F" forward-word
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-
-# Set options for GNU less
-# --quit-if-one-screen --ignore-case --status-column
-# --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD
-# --tabs=4 --no-init --window=-4
-export LESS='-F -i -J -M -R -W -x4 -X -z-4'
-# Set colors for GNU less
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-export GROFF_NO_SGR=1                  # for Konsole and Gnome-terminal
-
-# Syntax highlight output
-if type pygmentize >/dev/null; then
-    export LESSOPEN="|pygmentize -g -O style=solarized-dark %s"
-fi
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
-
-# Java settings on macOS and Linux
-if type java >/dev/null 2>&1; then
-    case $(uname) in
-        Darwin)
-            export JAVA_HOME=$(/usr/libexec/java_home)
-            ;;
-        Linux)
-            export JAVA_HOME=$(readlink -f $(which java) | sed 's:/bin/java::')
-            ;;
-    esac
-fi
-
-# Use grc with supported commands
-case $(uname) in
-    Darwin)
-        [[ -s "$(brew --prefix)/etc/grc.zsh" ]] && source $(brew --prefix)/etc/grc.zsh
-        ;;
-    Linux)
-        [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
-        ;;
-esac
-
-# Set personal functions
-printcert () {
-    cmd="openssl x509 -noout -in $1 -subject -dates -ext subjectAltName";
-    printf "\n%s\n\n" "${cmd}";
-    eval "${cmd}"
-}
-
-print_certchain () {
-    cmd="openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs -noout -text | grep -P '(Subject|Not Before|Not After\s|DNS):'"
-    printf "\n%s\n\n" "${cmd}";
-    eval "${cmd}"
-}
+export EDITOR='nvim'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-alias tree="tree -C"
-alias pcs="proxychains4"
-alias goproxy="export http_proxy=http://127.0.0.1:7890 https_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891"
-alias noproxy="unset all_proxy http_proxy https_proxy"
