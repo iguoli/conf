@@ -1,39 +1,68 @@
-" common settings
-set hlsearch
+" use system clipboard
+set clipboard=unnamedplus
+
+" enable mouse
+set mouse=a
+
+" enable line number and relative line number
 set number
 set relativenumber
-set mouse=a
-set wildmenu
-set smartindent
-set smarttab
-set tabstop=2
-set shiftwidth=2
+
+" use space instead of tab
 set expandtab
+
+" show existing tab with 2 spaces width
+set tabstop=2
+
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
+" On pressing tab, insert 2 spaces
+set softtabstop=2
+
+" copy indent from current line when starting a new line
+set autoindent
+
+" normally 'autoident' should also be on when using 'smartindent'
+" indent after a line ending with a '{'
+" indent after a line starting with a keywords like 'if',
+" 'while', 'for', 'function', etc.
+" indent before a line starting with '}'
+set smartindent
+
+" Case insensitive search
+set ignorecase
+
+" Case sensitive search when using capital letters
+set smartcase
+
+" enable highlight search
+set hlsearch
+
+" highlight current line
+set cursorline
+
+set wildmenu
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,uft-16,gbk,gb18030,big5,latin1
 set backspace=indent,eol,start
-set cursorline
 set pastetoggle=<F4>
 set background=dark
-syntax enable
 hi CursorLine cterm=None ctermbg=234
-
-" Set colorscheme
-try
-    colorscheme dracula
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme default
-endtry
+syntax enable
 
 " key mapping
 let mapleader = ','
 
 " 使用 `<Space>cmd` 替代 `:cmd` 进入Command-line
 nnoremap <Space> :
+
 " 在Normal-mode中格式化json文本
 nnoremap <leader>j :set ft=json<CR>:%!jq .<CR>
+
 " 在 Normal-mode 中以文件类型进行折叠
 nnoremap <leader>z :set fdm=syntax<CR>
+
 " 使用<tab>替代:bn在buffers中切换
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
@@ -48,7 +77,6 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'                " 彩虹括号增强版
 Plug 'terryma/vim-multiple-cursors'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 
 " UI
@@ -56,7 +84,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
 
-" Programming enhancement
+" Program enhancement
 Plug 'Yggdroot/indentLine'
 Plug 'tell-k/vim-autopep8'
 Plug 'scrooloose/syntastic'
@@ -77,6 +105,7 @@ if has("gui_running")
 
     set lines=35
     set columns=100
+    colorscheme dracula
 endif
 
 " the cursor style
