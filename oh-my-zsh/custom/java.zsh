@@ -1,5 +1,5 @@
 # Java on macOS
-if type java >/dev/null 2>&1; then
+if type java >& /dev/null; then
     case $(uname) in
         Darwin)
             export JAVA_HOME=$(/usr/libexec/java_home) ;;
