@@ -1,5 +1,7 @@
-export BROWSER="/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+# Set environment variable WSLENV on the Windows to import windows environment variables
+# For example: WSLENV=LOCALAPPDATA/p:PROGRAMFILES/p:PROGRAMW6432/p:SYSTEMROOT/p
+export BROWSER="$PROGRAMFILES/Microsoft/Edge/Application/msedge.exe"
 
-alias code='"/mnt/c/Users/lguo5/AppData/Local/Programs/Microsoft VS Code/bin/code"'
-alias bcomp='"/mnt/c/Program Files/Beyond Compare 4/BComp.exe"'
-alias open='/mnt/c/Windows/explorer.exe'
+alias code='"$LOCALAPPDATA/Programs/Microsoft VS Code/bin/code"'
+alias bcomp='"$PROGRAMW6432/Beyond Compare 4/BComp.exe"'
+alias open='$SYSTEMROOT/explorer.exe'
