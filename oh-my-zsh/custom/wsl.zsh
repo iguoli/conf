@@ -3,10 +3,7 @@
 # Use `ls env:` to find what environment variables are available on Windows
 # Then, WSL will import these variables into the WSL environment and convert them to Unix paths automatically
 # Add cursor, vscode, beyond compare and edge to PATH
-export PATH="$LOCALAPPDATA/Programs/Microsoft VS Code/bin":"$LOCALAPPDATA/Programs/Beyond Compare 5":"$ProgramFiles (x86)/Microsoft/Edge/Application":$PATH
-
-# Set the Windows IP address
-export WINIP=$(ip route | awk '/default/ { print $3 }')
+export PATH="$LOCALAPPDATA/Programs/Microsoft VS Code/bin":"$ProgramFiles (x86)/Microsoft/Edge/Application":$PATH
 
 export BROWSER="msedge.exe"
 
