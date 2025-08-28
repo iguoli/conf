@@ -2,7 +2,8 @@
 if type java >& /dev/null; then
     case $(uname) in
         Darwin)
-            export JAVA_HOME=$(/usr/libexec/java_home) ;;
+            export JAVA_HOME=$(/usr/libexec/java_home)
+            ;;
         Linux)
             export JAVA_HOME=$(readlink -f $(which java) | sed 's:/bin/java::')
             ;;
