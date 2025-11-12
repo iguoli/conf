@@ -1,6 +1,3 @@
-" use system clipboard
-set clipboard=unnamedplus
-
 " enable mouse
 set mouse=a
 
