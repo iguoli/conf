@@ -1,6 +1,6 @@
 # Print subject, dates info of x509 certification.
 print_certfile () {
-    cmd="openssl x509 -noout -in $1 -subject -dates -ext subjectAltName";
+    cmd="openssl x509 -noout -in $1 -issuer -subject -dates -ext subjectAltName";
     printf "\n%s\n\n" "${cmd}";
     eval "${cmd}"
 }
