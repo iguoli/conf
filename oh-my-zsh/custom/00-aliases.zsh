@@ -7,9 +7,9 @@
 proxy_url=${MYPROXY:-127.0.0.1:7890}
 
 alias goproxy="export \
-	http_proxy=proxy_url \
-	https_proxy=proxy_url \
-	all_proxy=socks5://127.0.0.1:7890 \
+	http_proxy=http://$proxy_url \
+	https_proxy=http://$proxy_url \
+	all_proxy=socks5://$proxy_url \
 	no_proxy='localhost, 127.0.0.1'"
 
 alias noproxy="unset \
