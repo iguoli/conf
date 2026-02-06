@@ -7,11 +7,6 @@ export PATH="$LOCALAPPDATA/Programs/Microsoft VS Code/bin":"$ProgramFiles (x86)/
 
 # Get the Windows host IP address
 export WINIP=$(ip route | awk '/default/ { print $3 }')
-alias goproxy="export \
-	http_proxy=http://${WINIP}:7890 \
-	https_proxy=http://${WINIP}:7890 \
-	all_proxy=socks5://${WINIP}:7890 \
-	no_proxy='localhost, 127.0.0.1'"
 
 export BROWSER="msedge.exe"
 
